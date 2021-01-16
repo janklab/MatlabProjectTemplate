@@ -1,0 +1,9 @@
+#!/bin/bash
+
+doit () {
+for i in * src/* lib/* Mcode/* Mcode/*/*; do
+  echo "This file just exists to keep the empty directory alive in git" > $i/.gitkeep 
+done
+}
+
+doit 2>/dev/null
