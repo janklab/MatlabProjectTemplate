@@ -18,6 +18,7 @@ fi
 
 perl -spi -e "s/<user>/$user/g" *.md */*.md
 perl -spi -e "s/<myproject>/$project" *.md */*.md
+perl -spi -e "s/mypackage/$package" */*.m
 
 mv Mcode/mypackage Mcode/$package
 

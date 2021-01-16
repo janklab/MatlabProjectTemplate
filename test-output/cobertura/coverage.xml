@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<coverage branch-rate="NaN" branches-covered="NaN" branches-valid="NaN" complexity="NaN" line-rate="0.1" lines-covered="2" lines-valid="20" timestamp="1610754876.5749" version="">
+
+  <sources>
+    <source>/Users/janke/local/repos/MatlabProjectTemplate/Mcode/+mypackage/</source>
+  </sources>
+
+  <packages>
+    <package branch-rate="NaN" complexity="NaN" line-rate="0.1" name="mypackage.test">
+      <classes>
+        <class branch-rate="NaN" complexity="NaN" filename="+test/HelloWorldTest.m" line-rate="1" name="mypackage.test.HelloWorldTest">
+          <methods>
+            <method branch-rate="NaN" line-rate="1" name="testHelloWorld" signature="testHelloWorld(t)">
+              <lines>
+                <line hits="1" number="6"/>
+                <line hits="1" number="7"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line hits="1" number="6"/>
+            <line hits="1" number="7"/>
+          </lines>
+        </class>
+        <class branch-rate="NaN" complexity="NaN" filename="+test/run_all_tests.m" line-rate="0" name="mypackage.test.run_all_tests">
+          <methods/>
+          <lines>
+            <line hits="0" number="28"/>
+            <line hits="0" number="29"/>
+            <line hits="0" number="30"/>
+            <line hits="0" number="31"/>
+            <line hits="0" number="33"/>
+            <line hits="0" number="35"/>
+            <line hits="0" number="37"/>
+            <line hits="0" number="38"/>
+            <line hits="0" number="39"/>
+            <line hits="0" number="40"/>
+            <line hits="0" number="41"/>
+            <line hits="0" number="42"/>
+            <line hits="0" number="43"/>
+            <line hits="0" number="44"/>
+            <line hits="0" number="45"/>
+            <line hits="0" number="46"/>
+            <line hits="0" number="47"/>
+            <line hits="0" number="49"/>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+
+</coverage>
