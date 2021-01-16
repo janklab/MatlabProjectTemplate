@@ -1,16 +1,16 @@
-title: <myproject> Documentation
-email: <myprojectemail>
-description: Documentation for <myproject>
+title: __myproject__ Documentation
+email: __myprojectemail__
+description: Documentation for __myproject__
 
 baseurl: ""
 url: ""
 
-github_username: <ghuser>
+github_username: __myghuser__
 github:
-  repository_nwo: <ghuser>/<myproject>
-forkme_nwo: <ghuser>/<myproject>
+  repository_nwo: __myghuser__/__myproject__
+forkme_nwo: __myghuser__/__myproject__
 footer-links:
-  github: <ghuser>/<myproject>
+  github: __myghuser__/__myproject__
 
 permalink: pretty
 

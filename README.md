@@ -29,7 +29,7 @@ MatlabProjectTemplate was written by [Andrew Janke](https://apjanke.net). The pr
 Info about your own project starts here!
 
 ----------------------------------------------------------------------------
-# <myproject>
+# __myproject__
 
 ## About
 
@@ -43,7 +43,7 @@ Describe your project!
 
 ## Author
 
-<myproject> is written and maintained by [YOUR-NAME-HERE](https://your-website.com). The project home page is <https://github.com/<ghuser>/<myproject>>.
+__myproject__ is written and maintained by [YOUR-NAME-HERE](https://your-website.com). The project home page is <https://github.com/__myghuser__/__myproject__>.
 
 ## Acknowledgments
 

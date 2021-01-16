@@ -43,9 +43,9 @@ perl -spi -e "s/mypackage/$PACKAGE" */*.m
 mv Mcode/+mypackage Mcode/+$PACKAGE
 
 docfiles="*.md */*.md doc-src*/*.yml"
-perl -spi -e "s/<myproject>/$PROJECT" $docfiles 
-perl -spi -e "s/<myprojectemail>/$PROJECT_EMAIL" $docfiles
-perl -spi -e "s/<ghuser>/$GHUSER/g" $docfiles
+perl -spi -e "s/__myproject__/$PROJECT" $docfiles 
+perl -spi -e "s/__myprojectemail__/$PROJECT_EMAIL" $docfiles
+perl -spi -e "s/__myghuser__/$GHUSER/g" $docfiles
 
 mv doc-src-$DOCTOOL doc-src
 

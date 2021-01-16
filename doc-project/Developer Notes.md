@@ -1,4 +1,4 @@
-# <myproject> Developer Notes
+# __myproject__ Developer Notes
 
 Here is where you put notes for the developers working on your project! Recommended sections:
 
