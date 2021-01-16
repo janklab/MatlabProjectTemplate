@@ -1,6 +1,6 @@
 # MatlabProjectTemplate
 
-This is a template repo for creating Matlab library and application projects.
+This is a template repo for creating Matlab library and application projects. It defines a "standard" project structure that should be suitable for many projects, including those intended for redistribution / open source.
 
 It is suitable for both libraries and applications, and includes coding and organizational conventions that make it safe to use this project's code in a Matlab environment that uses code from other projects, too.
 
