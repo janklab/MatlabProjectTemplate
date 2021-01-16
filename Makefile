@@ -1,7 +1,11 @@
 # This Makefile lets you:
-#   - Build the project
-#   - Run tests
+#   - Build the project documentation ("make doc")
+#   - Run tests ("make test")
+#   - Package the project for distribution ("make dist")
+#   
 # The test run only works on Linux
+
+# TODO: Should make dist have a dependency on make doc?
 
 PROGRAM=myproject
 VERSION=$(shell cat VERSION)
@@ -11,6 +15,10 @@ FILES=README.md LICENSE Mcode doc lib tests examples
 .PHONY: test
 test:
 	./test/launchtests
+
+.PHONY: doc
+doc:
+  cd doc-src && ./make_doc
 
 .PHONY: dist
 dist:

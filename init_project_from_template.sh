@@ -22,26 +22,41 @@ PACKAGE=mypackage
 # Your GitHub user name or organization name that's hosting the project
 GHUSER=mygithubusername
 
+# If you want to provide a contact email for your project, put it here. Optional.
+PROJECT_EMAIL=
+
+# The site generator tool you want to use for the project documentation.
+# Valid choices are "jekyll", "asciidoc", and "mkdocs"
 
 
 # Don't touch anything below here!
 
+if [[ ! -e "doc-src-$DOCTOOL" ]]; then
+  echo >&2 "Error: Invalid choice for DOCTOOL: $DOCTOOL"
+  echo >&2 "Error: Valid values are: jekyll, asciidoc, mkdocs"
+  exit 1
+fi
+
 # Munge the source code and documentation
 
-perl -spi -e "s/<myproject>/$PROJECT" *.md */*.md
 perl -spi -e "s/mypackage/$PACKAGE" */*.m
-perl -spi -e "s/<user>/$GHUSER/g" *.md */*.md
-
 mv Mcode/+mypackage Mcode/+$PACKAGE
+
+docfiles="*.md */*.md doc-src*/*.yml"
+perl -spi -e "s/<myproject>/$PROJECT" $docfiles 
+perl -spi -e "s/<myprojectemail>/$PROJECT_EMAIL" $docfiles
+perl -spi -e "s/<ghuser>/$GHUSER/g" $docfiles
+
+mv doc-src-$DOCTOOL doc-src
 
 # Clean up the README
 
 perl -spi -e 's/.*--------------//mg' README.md
 
-# Remove files used only by the MatlabProjectTemplate repo template
-
-rm -rf makedummies doc-MatlabProjectTemplate
-
 # Okeedoke!
 
-echo "Project $PROJECT is initialized. Happy hacking!"
+echo "Project $PROJECT is initialized."
+echo "See MatlabProjectTemplate/README.md for more info."
+echo ""
+echo "Happy hacking!"
+

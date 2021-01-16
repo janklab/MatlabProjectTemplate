@@ -1,0 +1,33 @@
+title: <myproject> Documentation
+email: <myprojectemail>
+description: Documentation for <myproject>
+
+baseurl: ""
+url: ""
+
+github_username: <ghuser>
+github:
+  repository_nwo: <ghuser>/<myproject>
+forkme_nwo: <ghuser>/<myproject>
+footer-links:
+  github: <ghuser>/<myproject>
+
+permalink: pretty
+
+exclude:
+  - Gemfile*
+  - README.md
+  - make_doc
+
+markdown: kramdown
+theme: jekyll-theme-slate
+highlighter: rouge
+kramdown:
+  syntax_highlighter_opts:
+    default_lang: matlab
+plugins:
+  - jekyll-last-modified-at
+  - jekyll-toc          # https://github.com/toshimaru/jekyll-toc
+  - jekyll-sitemap      # https://github.com/jekyll/jekyll-sitemap
+  # Not sure about this one:
+  # - jekyll-paginate

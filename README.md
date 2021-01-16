@@ -18,6 +18,14 @@ Then:
 * Edit the files in `doc-project` to reflect your plans
 * Choose a document format: Jekyll, Asciidoc, or mkdocs. Move the appropriate `doc-src-<type>` to `doc-src` and delete the others.
 
+See `MatlabProjectTemplate/README.md` and other documents in the `MatlabProjectTemplate/` directory for more information and details.
+
+## About MatlabProjectTemplate
+
+MatlabProjectTemplate was written by [Andrew Janke](https://apjanke.net). The project home page is <https://github.com/apjanke/MatlabProjectTemplate>. You can get support, or even contribute to the project, there.
+
+## That's all folks
+
 Info about your own project starts here!
 
 ----------------------------------------------------------------------------
@@ -35,7 +43,7 @@ Describe your project!
 
 ## Author
 
-<myproject> is written and maintained by [YOUR-NAME-HERE](https://your-website.com). The project home page is <https://github.com/<user>/<myproject>>.
+<myproject> is written and maintained by [YOUR-NAME-HERE](https://your-website.com). The project home page is <https://github.com/<ghuser>/<myproject>>.
 
 ## Acknowledgments
 

@@ -17,9 +17,10 @@
 .settings
 
 # Doc site server droppings
-doc/_site
-doc/.sass-cache
-doc/.jekyll-cache
+_site
+.sass-cache
+.jekyll-cache
+Gemfile.lock
 
 # Compiled class file
 *.class
