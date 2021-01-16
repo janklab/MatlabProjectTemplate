@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<testsuites>
-
-  <testsuite errors="0" failures="0" name="mypackage.test.HelloWorldTest" skipped="0" tests="1" time="0.032411">
-    <testcase classname="mypackage.test.HelloWorldTest" name="testHelloWorld" time="0.032411"/>
-  </testsuite>
-
-</testsuites>

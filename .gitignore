@@ -38,6 +38,7 @@ __pycache__
 *.log
 .ipynb_checkpoints
 hs_err_pid*
+#/test-output/
 
 # Editor, OS, and file browser droppings
 *.DS_Store
