@@ -3,7 +3,7 @@
 * Run all the tests.
   * `make test`, duh.
   * Wouldn't hurt to do `make clean && git status && make test`/manual-cleanup, just to be sure.
-* Double-check the version number and date in `DESCRIPTION`
+* Update and double-check the version number and date in `VERSION`
 * Update the installation instructions in README to use the upcoming new release tarball URL.
   * Format is: `https://github.com/<user>/<myproject>/releases/download/v<version>/<myproject>-<version>.tar.gz`
 * Regenerate the doco
@@ -21,7 +21,7 @@
   * Just use `<version>` as the name for the release.
   * Upload the dist tarball as a file for the release.
 * Open development for next version
-  * Update version number in `DESCRIPTION` to next patch or minor version, as appropriate.
+  * Update version number in `VERSION` to have a "+" suffix
   * Rebuild the doco.
     * `(cd doc; make maintainer-clean; make all)`
   * `git commit -a -m 'Open development for v<version>'; git push`
