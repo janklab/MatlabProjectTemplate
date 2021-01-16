@@ -1,28 +1,47 @@
 #!/bin/bash
 #
 # Usage:
-#    init_project_from_template.sh <github_username> <projectname> <projectpackage>
+#
+#    init_project_from_template.sh
+#
+# You need to edit this file and fill in some variable values before running it.
 #
 # This works on Mac and Linux.
 
-# TODO: Automatic license selection and creation
+# Edit these variables to have the right values and then run this script
 
-user=$1
-project=$2
-package=$3
+# The name of your project and its GitHub repo. Capitalization should match what
+# your public "branding" is; this will show up in human-readable documentation.
+PROJECT=MyProject
 
-if [[ -z "$user" || -z "$project" || -z "$package" ]]; then
-  echo >&2 "Usage: $0 <github_username> <projectname> <projectpackage>"
-  exit 1
-fi
+# The name of the top-level Matlab package that your project defines and keeps
+# its code in. This is the "+<package>" directory that'll be directly under Mcode,
+# and is the "namespace" that your project lives in.
+PACKAGE=mypackage
 
-perl -spi -e "s/<user>/$user/g" *.md */*.md
-perl -spi -e "s/<myproject>/$project" *.md */*.md
-perl -spi -e "s/mypackage/$package" */*.m
+# Your GitHub user name or organization name that's hosting the project
+GHUSER=mygithubusername
 
-mv Mcode/mypackage Mcode/$package
 
-# Remove files used only by the repo template
+
+# Don't touch anything below here!
+
+# Munge the source code and documentation
+
+perl -spi -e "s/<myproject>/$PROJECT" *.md */*.md
+perl -spi -e "s/mypackage/$PACKAGE" */*.m
+perl -spi -e "s/<user>/$GHUSER/g" *.md */*.md
+
+mv Mcode/+mypackage Mcode/+$PACKAGE
+
+# Clean up the README
+
+perl -spi -e 's/.*--------------//mg' README.md
+
+# Remove files used only by the MatlabProjectTemplate repo template
+
 rm -rf makedummies doc-MatlabProjectTemplate
 
-echo "Project $project is initialized. Happy hacking!"
+# Okeedoke!
+
+echo "Project $PROJECT is initialized. Happy hacking!"
