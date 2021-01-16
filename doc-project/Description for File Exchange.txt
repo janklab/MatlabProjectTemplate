@@ -1,0 +1,16 @@
+If you're going to post your project to MathWorks File Exchange, edit this file to contain what 
+you want to go in the Summary and Description fields of its posting. That way you don't have to worry
+about editing and formatting text in their little text field on the web page, and you'll have a
+history of what you posted. Plus you can edit it ahead of time to your heart's content and then
+just copy and paste.
+
+-------------------------------------------------------------------------------
+
+Summary:
+
+<One-line summary of the library>
+
+
+Description:
+
+<Full text to go in the Description field on File Exchange for this project>
