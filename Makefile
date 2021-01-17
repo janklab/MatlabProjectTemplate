@@ -30,4 +30,4 @@ dist:
 
 .PHONY: clean
 clean:
-	rm -rf dist/*
+	rm -rf dist/* doc-src/site doc-src/_site

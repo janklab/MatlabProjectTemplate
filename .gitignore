@@ -21,6 +21,8 @@ _site
 .sass-cache
 .jekyll-cache
 Gemfile.lock
+doc-src/site/
+doc/site/
 
 # Compiled class file
 *.class
