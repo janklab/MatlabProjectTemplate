@@ -18,6 +18,10 @@ MatlabProjectTemplate supports the following features. You don't _have_ to use a
 * _Automatic_ library initialization
 * Logging, in an [SLF4M](https://github.com/janklab/SLF4M)/SLF4J/Log4j-compatible manner
 
+## Requirements
+
+Some features, including project initialization, only work on Mac and Linux. But don't worry! If you're on Windows, just install [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and use that.
+
 ## Usage
 
 To create a new project from this template, go on GitHub, create a new repo, and select this repo as its template.
@@ -25,16 +29,16 @@ To create a new project from this template, go on GitHub, create a new repo, and
 Then:
 
 * Add a license file!
-* Edit the variables `project_settings.sh`
-* Run `init_project_from_template.sh`
-* Edit `.editorconfig` to reflect your preferred code style
-* Edit `<myproject>.prj.in` and put in all your contact and descriptive info and other stuff
+* Edit the variables `project_settings.sh`.
+* Run `init_project_from_template.sh`.
+* Edit `.editorconfig` to reflect your preferred code style.
+* Edit `<myproject>.prj.in` and put in all your contact and descriptive info and other stuff.
 
 And then:
 
-* Edit the files in `doc-project` to reflect your plans
-* Put your main Matlab source code in `Mcode/`
-* Put your example scripts in `examples/`
+* Put your main Matlab source code in `Mcode/`.
+* Put your example scripts in `examples/`.
+* Edit the files in `doc-project` to reflect your plans.
 * Hack away!
 
 When you're developing code for your project, you should add the `dev-kit/` directory to your Matlab path.

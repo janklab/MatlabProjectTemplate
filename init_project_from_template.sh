@@ -6,9 +6,9 @@
 #
 # You need to edit project_settings.sh and fill in some variable values before running it.
 #
-# This works on Mac and Linux.
+# This works on Mac and Linux. If you're running Windows, install Ubuntu for Windows and use that!
 
-# Don't touch anything below here!
+# Don't change this file!
 
 source ./project_settings.sh
 
@@ -71,7 +71,7 @@ mv src/java/myproject-java/src/main/java/com/example/mypackage \
     src/java/myproject-java/src/main/java/com/example/$PACKAGE
 mv src/java/myproject-java src/java/${PROJECT}-java
 
-mungefiles="Makefile *.md */*.md */*.adoc */*.yml myproject.prj.in *.m */*.m */*/*.m */*/*/*.m src/java/*/*.xml"
+mungefiles=".gitignore Makefile *.md */*.md */*.adoc */*.yml myproject.prj.in *.m */*.m */*/*.m */*/*/*.m src/java/*/*.xml"
 perl -spi -e "s/__myproject__/$PROJECT/g" $mungefiles
 perl -spi -e "s/myproject/$PROJECT/g" $mungefiles
 perl -spi -e "s/mypackage/$PACKAGE/g" $mungefiles
