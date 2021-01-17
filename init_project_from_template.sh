@@ -41,12 +41,12 @@ mv doc-src-$DOCSITETOOL doc-src
 
 # Munge the source code and documentation
 
-perl -spi -e "s/mypackage/$PACKAGE" */*.m
+perl -spi -e "s/mypackage/$PACKAGE/g" */*.m
 mv Mcode/+mypackage Mcode/+$PACKAGE
 
 docfiles="*.md */*.md */*.adoc */*.yml"
-perl -spi -e "s/__myproject__/$PROJECT" $docfiles 
-perl -spi -e "s/__myprojectemail__/$PROJECT_EMAIL" $docfiles
+perl -spi -e "s/__myproject__/$PROJECT/g" $docfiles 
+perl -spi -e "s/__myprojectemail__/$PROJECT_EMAIL/g" $docfiles
 perl -spi -e "s/__myghuser__/$GHUSER/g" $docfiles
 
 mv doc-src-$DOCTOOL doc-src
