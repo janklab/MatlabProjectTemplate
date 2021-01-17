@@ -24,12 +24,14 @@ But some users are going to want to P-code anyway, so we're providing support fo
 
 Because you should actually check in all your compiled MEX files into your git repo! This makes it so that users can run your project directly from the repo. Users and even developers cannot be expected to have a setup on their machine where they can build the MEX files themselves. This is a different model from most programming languages.
 
+You can use the `dev-kit/buildallmexfiles.m` function to build/rebuild all the MEX files in your source tree.
+
 ## So, how can I build cross-platform MEX files to support all OSes?
 
 Hell if I know. You'll probably need to pay for a cloud CI system or set up your own multi-OS build farm.
 
 This is why it's good to avoid MEX files if you can.
 
-## Why do you put unit tests in the main `Mcode/` dir instead of the separate top-level `tests` directory?
+## Why do you put unit tests in the main `Mcode/` dir instead of the separate top-level `tests` dir?
 
 Because I think that projects, especially software libraries, should actually ship all their tests with the distribution, so that users can run the tests in their environment and ensure that the software operates correctly in that context. The top-level `tests/` directory just contains wrapper scripts for launching your tests from the main `Mcode/` directory.
