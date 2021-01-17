@@ -18,6 +18,11 @@ if [[ ! -e "doc-src-$DOCSITETOOL" ]]; then
   exit 1
 fi
 
+# Setup
+
+# This syntax requires bash 4 or higher. Is that okay?
+PACKAGE_CAP="${PACKAGE^}"
+
 # Set up prerequisites
 
 function locate-matlab-on-mac() {
@@ -55,15 +60,17 @@ fi
 
 # Munge the source code and documentation
 
-perl -spi -e "s/mypackage/$PACKAGE/g" *.m */*.m */*/*.m src/java/*/*.xml
+mv Mcode/+mypackage/+internal/MypackageBase.m Mcode/+mypackage/+internal/${PACKAGE_CAP}Base.m
+mv Mcode/+mypackage/+internal/MypackageBaseHandle.m Mcode/+mypackage/+internal/${PACKAGE_CAP}BaseHandle.m
 mv Mcode/+mypackage Mcode/+$PACKAGE
 mv src/java/myproject-java/src/main/java/com/example/mypackage \
     src/java/myproject-java/src/main/java/com/example/$PACKAGE
 mv src/java/myproject-java src/java/${PROJECT}-java
 
-mungefiles="Makefile *.md */*.md */*.adoc */*.yml myproject.prj.in */*/*.m *.m src/java/*/*.xml"
+mungefiles="Makefile *.md */*.md */*.adoc */*.yml myproject.prj.in *.m */*.m */*/*.m */*/*/*.m src/java/*/*.xml"
 perl -spi -e "s/__myproject__/$PROJECT/g" $mungefiles
 perl -spi -e "s/myproject/$PROJECT/g" $mungefiles
+perl -spi -e "s/mypackage/$PACKAGE/g" $mungefiles
 perl -spi -e "s/__myprojectemail__/$PROJECT_EMAIL/g" $mungefiles
 perl -spi -e "s/__myprojectguid__/$PROJECT_GUID/g" $mungefiles
 perl -spi -e "s/__myproject_matlab_version__/$PROJECT_MATLAB_VERSION/g" $mungefiles

@@ -12,6 +12,7 @@ PROJECT_MATLAB_VERSION=R2019b
 # The name of the top-level Matlab package that your project defines and keeps
 # its code in. This is the "+<package>" directory that'll be directly under Mcode,
 # and is the "namespace" that your project lives in.
+# It is conventional for package names to be in all lower case.
 PACKAGE=mycoolpackage
 
 # Your GitHub user name or organization name that's hosting the project

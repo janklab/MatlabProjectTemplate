@@ -20,6 +20,11 @@ classdef globals
       out = val;
     end
     
+    function initialize
+      % Initialize this library/package
+      mypackage.internal.initializePackage;
+    end
+    
   end
   
 end

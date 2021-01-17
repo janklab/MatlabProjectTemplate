@@ -12,6 +12,8 @@ MatlabProjectTemplate supports the following features. You don't _have_ to use a
 * Distribution as plain `.tar.gz` archives and Matlab Toolbox `.mltbx` files
 * Using ("vendoring") third-party Java JAR and Matlab libraries
 * Custom Java code
+* Library initialization
+* _Automatic_ library initialization
 
 ## Usage
 
