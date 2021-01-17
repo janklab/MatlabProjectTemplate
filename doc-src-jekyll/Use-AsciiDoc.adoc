@@ -45,8 +45,8 @@ function anExampleFunction(foo, bar)
     bar string = "whatever"
   end
   
-  fprintf('Hello, world!')
-  fprintf('foo=%f, bar=%s', foo, bar)
+  fprintf('Hello, world!\n')
+  fprintf('foo=%f, bar=%s\n', foo, bar)
 end
 ....
 

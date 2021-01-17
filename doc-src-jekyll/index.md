@@ -35,7 +35,7 @@ function anExampleFunction(foo, bar)
     bar string = "whatever"
   end
 
-  fprintf('Hello, world!')
+  fprintf('Hello, world!\n')
 end
 ```
 
