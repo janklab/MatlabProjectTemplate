@@ -1,7 +1,7 @@
-function out = run_all_tests
+function out = runtests
   % runtests Run all the tests in mypackage
   %
-  % rslt = mypackage.test.run_all_tests
+  % rslt = mypackage.test.runtests
   %
   % Runs all the tests in mypackage, presenting results on the command
   % line and producing results output files.
@@ -17,7 +17,7 @@ function out = run_all_tests
   %     coverage.xml      - Cobertura format code coverage report
   %
   % Examples:
-  % mypackage.test.run_all_tests
+  % mypackage.test.runtests
   
   import matlab.unittest.TestSuite
   import matlab.unittest.TestRunner

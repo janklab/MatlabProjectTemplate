@@ -32,6 +32,8 @@ Hell if I know. You'll probably need to pay for a cloud CI system or set up your
 
 This is why it's good to avoid MEX files if you can.
 
-## Why do you put unit tests in the main `Mcode/` dir instead of the separate top-level `tests` dir?
+## Why do you put unit tests in the main `Mcode/` dir instead of a separate top-level `tests` dir?
 
-Because I think that projects, especially software libraries, should actually ship all their tests with the distribution, so that users can run the tests in their environment and ensure that the software operates correctly in that context. The top-level `tests/` directory just contains wrapper scripts for launching your tests from the main `Mcode/` directory.
+Because I think that projects, especially software libraries, should actually ship all their tests with the distribution, so that users can run the tests in their environment and ensure that the software operates correctly in that context.
+
+The top-level `dev-kit/` directory contains wrapper scripts for launching your tests from the main `Mcode/` directory. This is a development tool that sits on top of the tests themselves.
