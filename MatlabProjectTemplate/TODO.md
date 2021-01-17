@@ -5,5 +5,3 @@
   * Azure Pipelines support
 * Decide whether there should be another level of "lib/" under Mcode/
 * Matlab Project support
-* Matlab Toolbox (.mltbx) support
-  * Including the Help format documentation
