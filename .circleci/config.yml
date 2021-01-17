@@ -10,10 +10,10 @@ jobs:
       - checkout
       - matlab/install
       - matlab/run-command:
-        command: addpath dev-kit; launchtests
+          command: addpath dev-kit; launchtests
       - matlab/run-tests:
-        test-results-junit: test-results/matlab/results.xml
-        code-coverage-cobertura: coverage
-        source-folder: Mcode
+          test-results-junit: test-results/matlab/results.xml
+          code-coverage-cobertura: coverage
+          source-folder: Mcode
       - store_test_results:
-        path: test-results
+          path: test-results
