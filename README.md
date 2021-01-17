@@ -11,7 +11,7 @@ To create a new project from this template, go on GitHub, create a new repo, and
 Then:
 
 * Add a license file!
-* Edit the variables at the top of `init_project_from_template.sh`
+* Edit the variables `project_settings.sh`
 * Run `init_project_from_template.sh`
 * Edit `.editorconfig` to reflect your preferred code style
 * Edit `<myproject>.prj.in` and put in all your contact and descriptive info and other stuff
