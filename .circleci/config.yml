@@ -17,3 +17,9 @@ jobs:
           source-folder: Mcode
       - store_test_results:
           path: test-results
+      - run:
+          command: make test
+      - run:
+          command: make dist
+      - run:
+          command: make toolbox
