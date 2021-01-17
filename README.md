@@ -22,7 +22,7 @@ See `MatlabProjectTemplate/README.md` and other documents in the `MatlabProjectT
 
 ## About MatlabProjectTemplate
 
-MatlabProjectTemplate was written by [Andrew Janke](https://apjanke.net). The project home page is <https://github.com/apjanke/MatlabProjectTemplate>. You can get support, or even contribute to the project, there.
+MatlabProjectTemplate was written by [Andrew Janke](https://apjanke.net). The project home page is <https://github.com/janklab/MatlabProjectTemplate>. You can get support, or even contribute to the project, there.
 
 ## That's all folks
 

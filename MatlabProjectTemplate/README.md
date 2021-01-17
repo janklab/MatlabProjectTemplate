@@ -6,4 +6,4 @@ You can ignore this stuff if you want, or even delete it: it is not required for
 
 ## About MatlabProjectTemplate
 
-MatlabProjectTemplate was written by [Andrew Janke](https://apjanke.net). The project home page is <https://github.com/apjanke/MatlabProjectTemplate>. You can get support, or even contribute to the project, there.
+MatlabProjectTemplate was written by [Andrew Janke](https://apjanke.net). The project home page is <https://github.com/janklab/MatlabProjectTemplate>. You can get support, or even contribute to the project, there.
