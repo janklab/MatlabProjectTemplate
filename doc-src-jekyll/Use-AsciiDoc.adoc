@@ -50,7 +50,7 @@ function anExampleFunction(foo, bar)
 end
 ....
 
-Well, that Matlab syntax highlighting currently isn't right. I'll try to figure it out.
+That Matlab syntax highlighting currently isn't right. It's because Pygments, the syntax highlighter that Asciidoctor users, doesn't have good support for modern Matlab OOP language features.
 
 You can use "STEM" formatting to display science and engineering math markup. Inline STEM can be written like stem:[sqrt(4) = 2], and block STEM content looks like this:
 
