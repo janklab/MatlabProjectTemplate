@@ -4,6 +4,6 @@ function launchtests
 rootdir = fileparts(fileparts(mfilename('fullpath')));
 addpath(fullfile(rootdir, 'Mcode'))
 
-results = mypackage.test.run_all_tests
+results = mypackage.test.runtests
 
 end

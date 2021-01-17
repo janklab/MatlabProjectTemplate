@@ -1,5 +1,5 @@
 function out = run_all_tests
-  % run_all_tests Run all the tests in mypackage
+  % runtests Run all the tests in mypackage
   %
   % rslt = mypackage.test.run_all_tests
   %

@@ -15,10 +15,15 @@ Then:
 * Run `init_project_from_template.sh`
 * Edit `.editorconfig` to reflect your preferred code style
 * Edit `<myproject>.prj.in` and put in all your contact and descriptive info and other stuff
+
+And then:
+
 * Edit the files in `doc-project` to reflect your plans
 * Put your main Matlab source code in `Mcode/`
 * Put your example scripts in `examples/`
 * Hack away!
+
+When you're developing code for your project, you should add the `dev-kit/` directory to your Matlab path.
 
 See `MatlabProjectTemplate/README.md` and other documents in the `MatlabProjectTemplate/` directory for more information and details.
 
