@@ -1,0 +1,20 @@
+# Configuration for CircleCI
+version: 2.1
+orbs:
+  matlab: mathworks/matlab@0.3.1
+jobs:
+  build:
+    machine:
+      image: 'ubuntu-1604:201903-01'
+    steps:
+      - checkout
+      - matlab/install:
+        release: R2020a
+      - matlab/run-command:
+        command: addpath dev-kit; launchtests
+      - matlab/run-tests:
+        test-results-junit: test-results/matlab/results.xml
+        code-coverage-cobertura: coverage
+        source-folder: Mcode
+      - store_test_results:
+        path: test-results
