@@ -20,8 +20,12 @@ fi
 
 # Setup
 
-# This syntax requires bash 4 or higher. Is that okay?
-PACKAGE_CAP="${PACKAGE^}"
+# Do this instead of ${PACKAGE^}, because that syntax requires bash 4, and macOS
+# ships with bash 3.
+first=${PACKAGE:0:1}
+rest=${PACKAGE:1}
+firstcap=$(echo $first | tr 'a-z' 'A-Z')
+PACKAGE_CAP="${firstcap}${rest}"
 
 # Set up prerequisites
 
