@@ -18,10 +18,20 @@ test:
 
 .PHONY: doc
 doc:
-  cd doc-src && ./make_doc
+	cd doc-src && ./make_doc
+.PHONY: m-doc
+m-doc: doc
+	rm -rf M-doc
+	mkdir M-doc
+	cp -R doc/* M-doc
+	rm -f M-doc/feed.xml
+
+.PHONY: toolbox
+toolbox:
+	bash package_toolbox.sh
 
 .PHONY: dist
-dist:
+dist: m-doc
 	rm -rf dist/*
 	mkdir -p ${DIST}
 	cp -R $(FILES) $(DIST)
@@ -30,4 +40,4 @@ dist:
 
 .PHONY: clean
 clean:
-	rm -rf dist/* doc-src/site doc-src/_site
+	rm -rf dist/* doc-src/site doc-src/_site M-doc

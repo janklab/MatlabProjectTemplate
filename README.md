@@ -12,11 +12,12 @@ Then:
 
 * Add a license file!
 * Edit the variables at the top of `init_project_from_template.sh` and then run it
+* Edit `.editorconfig` to reflect your preferred code style
+* Edit `<myproject>.prj.in` and put in all your contact and descriptive info and other stuff
+* Edit the files in `doc-project` to reflect your plans
 * Put your main Matlab source code in `Mcode/`
 * Put your example scripts in `examples/`
-* Edit `.editorconfig` to reflect your preferred code style
-* Edit the files in `doc-project` to reflect your plans
-* Choose a document format: Jekyll, Asciidoc, or mkdocs. Move the appropriate `doc-src-<type>` to `doc-src` and delete the others.
+* Hack away!
 
 See `MatlabProjectTemplate/README.md` and other documents in the `MatlabProjectTemplate/` directory for more information and details.
 
