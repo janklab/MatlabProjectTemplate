@@ -37,3 +37,13 @@ This is why it's good to avoid MEX files if you can.
 Because I think that projects, especially software libraries, should actually ship all their tests with the distribution, so that users can run the tests in their environment and ensure that the software operates correctly in that context.
 
 The top-level `dev-kit/` directory contains wrapper scripts for launching your tests from the main `Mcode/` directory. This is a development tool that sits on top of the tests themselves.
+
+## GitHub is complaining about vulnerabilities!
+
+When interacting with this project on GitHub, you may see this warning:
+
+```bash
+remote: GitHub found 7 vulnerabilities on janklab/MatlabProjectTemplate's default branch (3 high, 4 moderate). To find out more,
+```
+
+This is because the Java project for custom Java code declares dependencies on some of the Java libraries that Matlab ships with, and they are old versions with vulnerabilities. There is nothing we can do about this, because we're stuck with the library versions that Matlab uses.
