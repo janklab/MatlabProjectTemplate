@@ -31,6 +31,10 @@ classdef SomeClass < SomeOtherClass
   methods
     function this = SomeClass()
     end
+    
+    function blah(this)
+      anExampleFunction(this.x)
+    end
   end
   
 end
@@ -42,6 +46,7 @@ function anExampleFunction(foo, bar)
   end
   
   fprintf('Hello, world!')
+  fprintf('foo=%f, bar=%s', foo, bar)
 end
 ....
 
