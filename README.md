@@ -8,7 +8,8 @@ It is suitable for both libraries and applications, and includes coding and orga
 
 MatlabProjectTemplate supports the following features. You don't _have_ to use any of them; you can just ignore the ones you don't care about. But they're there if you need them!
 
-* Building a Matlab Toolbox
+* Building Matlab Toolboxes
+* Matlab [Continuous Integration](https://www.mathworks.com/solutions/continuous-integration.html) and unit tests
 * Distribution as plain `.tar.gz` archives and Matlab Toolbox `.mltbx` files
 * Using ("vendoring") third-party Java JAR and Matlab libraries
 * Custom Java code
