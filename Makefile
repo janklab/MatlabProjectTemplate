@@ -54,4 +54,5 @@ clean:
 # This is for MatlabProjectTemplate's internal use. Don't call it yourself.
 .PHONY: rollback-init
 rollback-init:
+	git reset --hard
 	rm -rf M-doc doc-src Mcode/+mycoolpackage doc/* src/java/MyProject-java/src/main/java/com/example/mycoolpackage
