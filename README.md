@@ -30,7 +30,7 @@ You should write unit tests for your project! Use the [Matlab Unit Test Framewor
 
 MatlabProjectTemplate was written by [Andrew Janke](https://apjanke.net). The project home page is <https://github.com/janklab/MatlabProjectTemplate>. You can get support, or even contribute to the project, there.
 
-See the [FAQ](https://github.com/janklab/MatlabProjectTemplate/blob/main/MatlabProjectTemplate/doc/FAQ.html) or the stuff in the `MatlabProjectTemplate/doc` directory for more info.
+See the [FAQ](https://github.com/janklab/MatlabProjectTemplate/blob/main/MatlabProjectTemplate/doc/FAQ.md) or the stuff in the `MatlabProjectTemplate/doc` directory for more info.
 
 ## That's all folks
 
