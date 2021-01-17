@@ -29,3 +29,7 @@ Because you should actually check in all your compiled MEX files into your git r
 Hell if I know. You'll probably need to pay for a cloud CI system or set up your own multi-OS build farm.
 
 This is why it's good to avoid MEX files if you can.
+
+## Why do you put unit tests in the main `Mcode/` dir instead of the separate top-level `tests` directory?
+
+Because I think that projects, especially software libraries, should actually ship all their tests with the distribution, so that users can run the tests in their environment and ensure that the software operates correctly in that context. The top-level `tests/` directory just contains wrapper scripts for launching your tests from the main `Mcode/` directory.
