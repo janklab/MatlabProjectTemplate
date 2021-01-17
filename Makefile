@@ -14,7 +14,7 @@ FILES=README.md LICENSE Mcode doc lib tests examples
 
 .PHONY: test
 test:
-	./test/launchtests
+	./dev-kit/launchtests
 
 .PHONY: doc
 doc:
