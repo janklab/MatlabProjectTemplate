@@ -26,23 +26,25 @@ GHUSER=mygithubusername
 PROJECT_EMAIL=
 
 # The site generator tool you want to use for the project documentation.
-# Valid choices are "jekyll", "asciidoc", and "mkdocs"
-
+# Valid choices are "jekyll" and  "mkdocs"
+DOCSITETOOL=jekyll
 
 # Don't touch anything below here!
 
-if [[ ! -e "doc-src-$DOCTOOL" ]]; then
-  echo >&2 "Error: Invalid choice for DOCTOOL: $DOCTOOL"
-  echo >&2 "Error: Valid values are: jekyll, asciidoc, mkdocs"
+if [[ ! -e "doc-src-$DOCSITETOOL" ]]; then
+  echo >&2 "Error: Invalid choice for DOCSITETOOL: $DOCSITETOOL"
+  echo >&2 "Error: Valid values are: jekyll, mkdocs"
   exit 1
 fi
+
+mv doc-src-$DOCSITETOOL doc-src
 
 # Munge the source code and documentation
 
 perl -spi -e "s/mypackage/$PACKAGE" */*.m
 mv Mcode/+mypackage Mcode/+$PACKAGE
 
-docfiles="*.md */*.md doc-src*/*.yml"
+docfiles="*.md */*.md */*.adoc */*.yml"
 perl -spi -e "s/__myproject__/$PROJECT" $docfiles 
 perl -spi -e "s/__myprojectemail__/$PROJECT_EMAIL" $docfiles
 perl -spi -e "s/__myghuser__/$GHUSER/g" $docfiles

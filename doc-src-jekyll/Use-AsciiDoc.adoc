@@ -1,0 +1,69 @@
+---
+layout: default
+---
+= Use AsciiDoc
+:stem:
+:url-asciidoctor: http://asciidoctor.org
+:url-jekyll-asciidoc: https://github.com/asciidoctor/jekyll-asciidoc
+:url-asciidoctor-diagram: https://asciidoctor.org/docs/asciidoctor-diagram/
+
+You can write your documentation files in AsciiDoc as well as Markdown.
+Jekyll converts it to HTML using {url-asciidoctor}[Asciidoctor], via the {url-jekyll-asciidoc}[jekyll-asciidoc Jekyll plugin].
+
+Here's what code examples look like:
+
+Some Ruby:
+
+[source,ruby]
+puts "Hello, World!"
+
+And, of course, some Matlab:
+
+[source,matlab]
+....
+classdef SomeClass < SomeOtherClass
+  
+  properties
+    x (1,1) double = 42
+    y
+  end
+  
+  methods
+    function this = SomeClass()
+    end
+  end
+  
+end
+  
+function anExampleFunction(foo, bar)
+  arguments
+    foo (1,1) double
+    bar string = "whatever"
+  end
+  
+  fprintf('Hello, world!')
+end
+....
+
+Well, that Matlab syntax highlighting currently isn't right. I'll try to figure it out.
+
+You can use "STEM" formatting to display science and engineering math markup. Inline STEM can be written like stem:[sqrt(4) = 2], and block STEM content looks like this:
+
+[stem]
+++++
+sqrt(4) = 2
+++++
+
+(To get this to work, you need to explicitly enable `:stem:` on each `.adoc` page that uses it. I'm working on figuring out how to enable it globally.)
+
+You can include GraphViz and UML diagrams using the {url-asciidoctor-diagram}[Asciidoctor Diagram plugin], which is enabled by default.
+
+[graphviz,dot-example,svg]
+....
+digraph g {
+    a -> b
+    b -> c
+    c -> d
+    d -> a
+}
+....

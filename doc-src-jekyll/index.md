@@ -39,6 +39,10 @@ function anExampleFunction(foo, bar)
 end
 ```
 
+## AsciiDoc
+
+Some of the documentation pages use AsciiDoc. See [here](Use-AsciiDoc/index.html) for an example.
+
 ## Author
 
 __myproject__ is written and maintained by [YOUR-NAME-HERE](https://your-website.com). The project home page is <https://github.com/__myghuser__/__myproject__>.

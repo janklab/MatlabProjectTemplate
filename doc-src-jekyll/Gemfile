@@ -13,6 +13,8 @@ gem 'jekyll', '~> 3.8.5'
 gem 'minima', '~> 2.0'
 
 group :jekyll_plugins do
+  gem 'asciidoctor-diagram'
+  gem 'jekyll-asciidoc'
   gem 'jekyll-feed', '~> 0.6'
   gem 'jekyll-seo-tag'
   gem 'jekyll-theme-slate'
@@ -20,6 +22,9 @@ group :jekyll_plugins do
   gem 'jekyll-toc'
   gem 'jekyll-sitemap'
 end
+
+# Asciidoctor uses pygments for source highlighting
+gem 'pygments.rb'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -25,7 +25,21 @@ highlighter: rouge
 kramdown:
   syntax_highlighter_opts:
     default_lang: matlab
+asciidoc: {}
+asciidoctor:
+   base_dir: :docdir
+   safe: unsafe
+   attributes:
+     stem: 
+     imagesdir: /images
+     source-highlighter: pygments
+     pygments-stylesheet: css/asciidoc-pygments.css
+
+keep_files:
+- images
 plugins:
+  - asciidoctor-diagram
+  - jekyll-asciidoc
   - jekyll-last-modified-at
   - jekyll-toc          # https://github.com/toshimaru/jekyll-toc
   - jekyll-sitemap      # https://github.com/jekyll/jekyll-sitemap
