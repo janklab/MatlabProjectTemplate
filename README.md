@@ -37,7 +37,7 @@ MatlabProjectTemplate was written by [Andrew Janke](https://apjanke.net). The pr
 
 See the [FAQ](https://github.com/janklab/MatlabProjectTemplate/blob/main/MatlabProjectTemplate/doc/FAQ.md) or the stuff in the `MatlabProjectTemplate/doc` directory for more info.
 
-## That's all folks
+## That's all, folks!
 
 Info about your own project starts here!
 
