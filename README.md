@@ -4,7 +4,16 @@ This is a template repo for creating Matlab library and application projects. It
 
 It is suitable for both libraries and applications, and includes coding and organizational conventions that make it safe to use this project's code in a Matlab environment that uses code from other projects, too.
 
-## MatlabProjectTemplate Template Usage
+## Features
+
+MatlabProjectTemplate supports the following features. You don't _have_ to use any of them; you can just ignore the ones you don't care about. But they're there if you need them!
+
+* Building a Matlab Toolbox
+* Distribution as plain `.tar.gz` archives and Matlab Toolbox `.mltbx` files
+* Using ("vendoring") third-party Java JAR and Matlab libraries
+* Custom Java code
+
+## Usage
 
 To create a new project from this template, go on GitHub, create a new repo, and select this repo as its template.
 
@@ -30,6 +39,10 @@ See `MatlabProjectTemplate/README.md` and other documents in the `MatlabProjectT
 ## Unit tests
 
 You should write unit tests for your project! Use the [Matlab Unit Test Framework](https://www.mathworks.com/help/matlab/matlab-unit-test-framework.html) and put your tests in `Mcode/+<myproject>/+test`. Run them with `make test` in the shell or with `dev-kit/launchtests.m` in Matlab.
+
+## License
+
+MatlabProjectTemplate is multi-licensed under all of: MIT License, BSD 2-Clause License, Apache License, and GPLv3. You can use it in any project with a license compatible with any of those licenses. This includes commercial and proprietary software.
 
 ## About MatlabProjectTemplate
 

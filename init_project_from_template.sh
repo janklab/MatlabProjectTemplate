@@ -55,11 +55,15 @@ fi
 
 # Munge the source code and documentation
 
-perl -spi -e "s/mypackage/$PACKAGE/g" *.m */*.m */*/*.m
+perl -spi -e "s/mypackage/$PACKAGE/g" *.m */*.m */*/*.m src/java/*/*.xml
 mv Mcode/+mypackage Mcode/+$PACKAGE
+mv src/java/myproject-java/src/main/java/com/example/mypackage \
+    src/java/myproject-java/src/main/java/com/example/$PACKAGE
+mv src/java/myproject-java src/java/${PROJECT}-java
 
-mungefiles="*.md */*.md */*.adoc */*.yml myproject.prj.in */*/*.m *.m"
+mungefiles="Makefile *.md */*.md */*.adoc */*.yml myproject.prj.in */*/*.m *.m src/java/*/*.xml"
 perl -spi -e "s/__myproject__/$PROJECT/g" $mungefiles
+perl -spi -e "s/myproject/$PROJECT/g" $mungefiles
 perl -spi -e "s/__myprojectemail__/$PROJECT_EMAIL/g" $mungefiles
 perl -spi -e "s/__myprojectguid__/$PROJECT_GUID/g" $mungefiles
 perl -spi -e "s/__myproject_matlab_version__/$PROJECT_MATLAB_VERSION/g" $mungefiles
