@@ -50,3 +50,8 @@ java:
 .PHONY: clean
 clean:
 	rm -rf dist/* doc-src/site doc-src/_site M-doc
+
+# This is for MatlabProjectTemplate's internal use. Don't call it yourself.
+.PHONY: rollback-init
+rollback-init:
+	rm -rf M-doc doc-src Mcode/+mycoolpackage doc/* src/java/MyProject-java/src/main/java/com/example/mycoolpackage
