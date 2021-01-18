@@ -110,3 +110,5 @@ echo "See MatlabProjectTemplate/README.md for more info."
 echo ""
 echo "Happy hacking!"
 echo ""
+
+rm ./init_project_from_template.sh
