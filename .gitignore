@@ -15,6 +15,7 @@
 # shared between multiple users, because Matlab bakes full, absolute file paths
 # in to it.
 myproject.prj
+M-doc/
 
 # Editor and IDE droppings
 .idea
