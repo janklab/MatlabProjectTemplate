@@ -18,7 +18,7 @@ DISTFILES=build/Mcode doc lib examples README.md LICENSE CHANGES.txt
 
 .PHONY: test
 test:
-	./dev-kit/launchtests
+	./dev-kit/launchtests_mypackage
 
 .PHONY: build
 build:

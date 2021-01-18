@@ -10,6 +10,6 @@ mydir=$(dirname "$0")
 # Detect Matlab
 source "$mydir/locate_matlab.sh"
 
-echo "Running tests under Matlab ($matlab)"
+echo "Running tests for mypackage under Matlab ($matlab)"
 
-"$matlab" -batch "addpath('$mydir'); launchtests;"
+"$matlab" -batch "addpath('$mydir'); launchtests_mypackage;"

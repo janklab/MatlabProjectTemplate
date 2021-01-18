@@ -77,10 +77,12 @@ mv src/java/myproject-java/src/main/java/com/example/mypackage \
 mv src/java/myproject-java src/java/${PROJECT}-java
 mv dev-kit/build_mypackage dev-kit/build_${PACKAGE}
 mv dev-kit/build_mypackage.m dev-kit/build_${PACKAGE}.m
+mv dev-kit/launchtests_mypackage dev-kit/launchtests_${PACKAGE}
+mv dev-kit/launchtests_mypackage.m dev-kit/launchtests_${PACKAGE}.m
 mv dev-kit/buildallmexfiles_in_mypackage.m dev-kit/buildallmexfiles_in_${PACKAGE}
 
 mv MatlabProjectTemplate/project-README.md README.md
-mungefiles=".gitignore Makefile *.md */*.md */*.adoc */*.yml myproject.prj.in *.m */*.m */*/*.m */*/*/*.m src/java/*/*.xml azure-pipelines.yml"
+mungefiles=".gitignore Makefile *.md */*.md */*.adoc */*.yml myproject.prj.in *.m */*.m */*/*.m */*/*/*.m src/java/*/*.xml azure-pipelines.yml dev-kit/*"
 perl -spi -e "s/__myproject__/$PROJECT/g" $mungefiles
 perl -spi -e "s/myproject/$PROJECT/g" $mungefiles
 perl -spi -e "s/mypackage/$PACKAGE/g" $mungefiles
