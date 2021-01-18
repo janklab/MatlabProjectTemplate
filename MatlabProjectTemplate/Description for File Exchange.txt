@@ -30,5 +30,7 @@ MatlabProjectTemplate supports the following features. You don't _have_ to use a
 
 About
 
+MatlabProjectTemplate is authored by Andrew Janke (https://apjanke.net). The project home page is https://github.com/janklab/MatlabProjectTemplate. For support, post an Issue on the GitHub repo.
+
 MatlabProjectTemplate is part of the Janklab suite of libraries for Matlab. See http://github.com/janklab.
 
