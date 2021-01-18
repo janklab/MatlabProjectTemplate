@@ -86,6 +86,8 @@ perl -spi -e "s/__myproject_matlab_version__/$PROJECT_MATLAB_VERSION/g" $mungefi
 perl -spi -e "s/__myghuser__/$GHUSER/g" $mungefiles
 perl -spi -e "s/command: .\/MatlabProjectTemplate\/test_project_initialization/command: echo Hello world/g" \
   ./.circleci/config.yml
+perl -spi -e "s/- .\/MatlabProjectTemplate\/test_project_initialization//" \
+  .travis.yml
 
 rm -rf doc-src doc/*
 cp -R doc-src-$DOCSITETOOL doc-src
