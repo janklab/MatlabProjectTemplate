@@ -26,7 +26,7 @@ doc:
 .PHONY: m-doc
 m-doc: doc
 	rm -rf build/M-doc
-	mkdir build/M-doc
+	mkdir -p build/M-doc
 	cp -R doc/* build/M-doc
 	rm -f build/M-doc/feed.xml
 
