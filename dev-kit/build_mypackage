@@ -12,4 +12,4 @@ source "$mydir/locate_matlab.sh"
 
 echo "Building project with Matlab ($matlab)"
 
-"$matlab" -batch "addpath('$mydir'); build_project;"
+"$matlab" -batch "addpath('$mydir'); build_myproject;"
