@@ -53,7 +53,9 @@ __pycache__
 *.log
 .ipynb_checkpoints
 hs_err_pid*
-#/test-output/
+/test-output/
+/coverage
+/coverage-results
 
 # Editor, OS, and file browser droppings
 *.DS_Store
