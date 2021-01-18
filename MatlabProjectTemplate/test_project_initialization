@@ -1,0 +1,30 @@
+#/usr/bin/env bash
+#
+#
+
+set -e
+
+# Do not run if there are local changes, because the rollback is destructive
+if [[ $(git status --porcelain) ]]; then
+  echo >&2 "Error: Cannot run $0 when there are uncommitted changes."
+  exit 1
+fi
+
+./init_project_from_template.sh
+
+echo ""
+echo "Running tests..."
+make test
+
+echo ""
+echo "Building artifacts..."
+make dist
+make toolbox
+
+echo ""
+echo "Cleaning up..."
+make clean
+make rollback-init
+
+echo ""
+echo "Test passed."
