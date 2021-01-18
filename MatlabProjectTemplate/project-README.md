@@ -1,5 +1,8 @@
 # __myproject__
 
+<!-- Remove the badges for CI services that you're not going to use. -->
+[![Travis Build Status](https://travis-ci.com/myghuser/myproject.svg?branch=main)](https://travis-ci.com/github/myghuser/myproject)  [![CircleCI Build Status](https://circleci.com/gh/myghuser/myproject.svg?style=shield)](https://circleci.com/gh/myghuser/myproject) [![Azure Build Status](https://dev.azure.com/myghuser/myproject/_apis/build/status/myghuser.myproject?branchName=main)](https://dev.azure.com/myghuser/myproject/_build/latest?definitionId=1&branchName=main)
+
 ## About
 
 Describe your project!
