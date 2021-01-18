@@ -8,7 +8,7 @@ just copy and paste.
 
 Summary:
 
-<One-line summary of the library>
+<One-line summary of myproject>
 
 
 Description:
