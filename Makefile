@@ -25,10 +25,10 @@ doc:
 	cd doc-src && ./make_doc
 .PHONY: m-doc
 m-doc: doc
-	rm -rf M-doc
-	mkdir M-doc
-	cp -R doc/* M-doc
-	rm -f M-doc/feed.xml
+	rm -rf build/M-doc
+	mkdir build/M-doc
+	cp -R doc/* build/M-doc
+	rm -f build/M-doc/feed.xml
 
 .PHONY: toolbox
 toolbox:

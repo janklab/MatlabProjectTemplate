@@ -86,7 +86,7 @@ scratch
       <file>${PROJECT_ROOT}/.editorconfig</file>
       <file>${PROJECT_ROOT}/LICENSE</file>
       <file>${PROJECT_ROOT}/VERSION</file>
-      <file>${PROJECT_ROOT}/M-doc</file>
+      <file>${PROJECT_ROOT}/build/M-doc</file>
       <file>${PROJECT_ROOT}/Makefile</file>
       <file>${PROJECT_ROOT}/Mcode</file>
       <file>${PROJECT_ROOT}/README.md</file>

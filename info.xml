@@ -7,7 +7,7 @@
     <name>Janklab</name>
     <type>toolbox</type>
     <icon/>
-    <help_location>M-doc</help_location>
+    <help_location>build/M-doc</help_location>
     <help_contents_icon/>
     
 </productinfo>
