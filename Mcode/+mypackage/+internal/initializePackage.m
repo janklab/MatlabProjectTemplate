@@ -37,6 +37,8 @@ for mlib = mLibs
   if ~isempty(d)
     addpath(mlibdir);
   end
+  % TODO: Maybe we should just look at all top-level dirs that aren't `+` package dirs,
+  % and add them all if they contain any M-files?
 end
 
 
