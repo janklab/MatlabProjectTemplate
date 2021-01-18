@@ -51,9 +51,13 @@ java:
 clean:
 	rm -rf dist/* doc-src/site doc-src/_site M-doc
 
+# start-template-internal
+
 # This is for MatlabProjectTemplate's internal use. Don't call it yourself.
 .PHONY: rollback-init
 rollback-init:
 	git reset --hard
 	rm -rf M-doc Mcode/+mycoolpackage doc-src/* doc/* src/java/MyProject-java/src/main/java/com/example/mycoolpackage
 	git reset --hard
+
+# end-template-internal

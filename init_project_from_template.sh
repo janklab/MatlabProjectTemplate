@@ -89,6 +89,7 @@ perl -spi -e "s/command: .\/MatlabProjectTemplate\/test_project_initialization/c
   ./.circleci/config.yml
 perl -spi -e "s/- .\/MatlabProjectTemplate\/test_project_initialization//" \
   .travis.yml
+perl -0pi -e 's/# start-template-internal.*# end-template-internal//smg' Makefile
 
 rm -rf doc-src doc/*
 cp -R doc-src-$DOCSITETOOL doc-src
@@ -96,10 +97,6 @@ rm -rf doc-src-*
 
 echo $PROJECT_MATLAB_VERSION > .matlab_version
 mv myproject.prj.in $PROJECT.prj.in
-
-# Clean up the README
-
-perl -0pi -e 's/.*--------------\n//smg' README.md
 
 # Okeedoke!
 
