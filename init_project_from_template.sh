@@ -82,7 +82,7 @@ mv dev-kit/launchtests_mypackage.m dev-kit/launchtests_${PACKAGE}.m
 mv dev-kit/buildallmexfiles_in_mypackage.m dev-kit/buildallmexfiles_in_${PACKAGE}
 
 mv MatlabProjectTemplate/project-README.md README.md
-mungefiles=".gitignore Makefile *.md */*.md */*.adoc */*.yml myproject.prj.in *.m */*.m */*/*.m */*/*/*.m src/java/*/*.xml azure-pipelines.yml dev-kit/*"
+mungefiles=".gitignore Makefile *.md */*.md */*.adoc */*.yml myproject.prj.in *.m */*.m */*/*.m */*/*/*.m src/java/*/*.xml azure-pipelines.yml dev-kit/* CHANGES.txt "
 perl -spi -e "s/__myproject__/$PROJECT/g" $mungefiles
 perl -spi -e "s/myproject/$PROJECT/g" $mungefiles
 perl -spi -e "s/mypackage/$PACKAGE/g" $mungefiles
