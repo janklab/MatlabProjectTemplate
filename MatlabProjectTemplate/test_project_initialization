@@ -7,6 +7,8 @@ set -e
 # Do not run if there are local changes, because the rollback is destructive
 if [[ $(git status --porcelain) ]]; then
   echo >&2 "Error: Cannot run $0 when there are uncommitted changes."
+  echo >&2 "Changes:"
+  git status --porcelain >&2
   exit 1
 fi
 
