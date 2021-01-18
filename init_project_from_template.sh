@@ -10,6 +10,8 @@
 
 # Don't change this file!
 
+set -e
+
 source ./project_settings.sh
 
 if [[ ! -e "doc-src-$DOCSITETOOL" ]]; then
@@ -80,6 +82,7 @@ perl -spi -e "s/__myprojectguid__/$PROJECT_GUID/g" $mungefiles
 perl -spi -e "s/__myproject_matlab_version__/$PROJECT_MATLAB_VERSION/g" $mungefiles
 perl -spi -e "s/__myghuser__/$GHUSER/g" $mungefiles
 
+rm -rf doc-src doc/*
 cp -R doc-src-$DOCSITETOOL doc-src
 rm -rf doc-src-*
 
