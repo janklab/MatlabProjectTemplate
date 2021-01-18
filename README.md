@@ -11,9 +11,9 @@ It is suitable for both libraries and applications, and includes coding and orga
 MatlabProjectTemplate supports the following features. You don't _have_ to use any of them; you can just ignore the ones you don't care about. But they're there if you need them!
 
 * Collaboration between multiple developers
-* Building Matlab Toolboxes
+* Building [Matlab Toolboxes](https://www.mathworks.com/help/matlab/matlab_prog/create-and-share-custom-matlab-toolboxes.html)
 * Matlab [Continuous Integration](https://www.mathworks.com/solutions/continuous-integration.html) and unit tests
-* Distribution as plain `.tar.gz` archives and Matlab Toolbox `.mltbx` files
+* Distribution as both plain zip files and Matlab Toolbox `.mltbx` files
 * Using ("vendoring") third-party Java JAR and Matlab libraries
 * Custom Java code
 * Library initialization
@@ -73,6 +73,8 @@ Info about your own project starts here!
 Describe your project!
 
 ## Installation
+
+To install __myproject__, download it from the [Releases page](https://github.com/__myghuser__/__myproject__/releases) or clone the [repo](https://github.com/__myghuser__/__myproject__) to get it on your disk. Then add its `Mcode/` folder to your Matlab path.
 
 ## Usage
 
