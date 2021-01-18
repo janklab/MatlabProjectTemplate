@@ -14,11 +14,15 @@
 PROGRAM=myproject
 VERSION=$(shell cat VERSION)
 DIST=dist/${PROGRAM}-${VERSION}
-DISTFILES=Mcode doc lib examples README.md LICENSE CHANGES.txt
+DISTFILES=build/Mcode doc lib examples README.md LICENSE CHANGES.txt
 
 .PHONY: test
 test:
 	./dev-kit/launchtests
+
+.PHONY: build
+build:
+	./dev-kit/build_myproject
 
 .PHONY: doc
 doc:
@@ -35,7 +39,7 @@ toolbox:
 	bash package_toolbox.sh
 
 .PHONY: dist
-dist: m-doc
+dist: build m-doc
 	rm -rf dist/*
 	mkdir -p ${DIST}
 	cp -R $(DISTFILES) $(DIST)
@@ -49,7 +53,7 @@ java:
 
 .PHONY: clean
 clean:
-	rm -rf dist/* doc-src/site doc-src/_site M-doc
+	rm -rf dist/* build doc-src/site doc-src/_site M-doc
 
 # start-template-internal
 

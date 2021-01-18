@@ -75,6 +75,9 @@ mv Mcode/+mypackage Mcode/+$PACKAGE
 mv src/java/myproject-java/src/main/java/com/example/mypackage \
     src/java/myproject-java/src/main/java/com/example/$PACKAGE
 mv src/java/myproject-java src/java/${PROJECT}-java
+mv dev-kit/build_mypackage dev-kit/build_${PACKAGE}
+mv dev-kit/build_mypackage.m dev-kit/build_${PACKAGE}.m
+mv dev-kit/buildallmexfiles_in_mypackage.m dev-kit/buildallmexfiles_in_${PACKAGE}
 
 mv MatlabProjectTemplate/project-README.md README.md
 mungefiles=".gitignore Makefile *.md */*.md */*.adoc */*.yml myproject.prj.in *.m */*.m */*/*.m */*/*/*.m src/java/*/*.xml azure-pipelines.yml"

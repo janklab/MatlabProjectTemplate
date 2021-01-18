@@ -1,4 +1,4 @@
-function buildallmexfiles
+function buildallmexfiles_in_mypackage
   % Builds all the MEX files in __myproject__'s source tree
   %
   % This is for use during development.
@@ -10,7 +10,7 @@ function buildallmexfiles
   % to specify other options, either globally or on a per-file basis. We should probably
   % add something to do that.
 
-  coderoot = fullfile(__mypackage__.globals.distroot, 'Mcode')
+  coderoot = fullfile(mypackage.globals.distroot, 'Mcode')
   mexSourceFiles = [
     searchFilesRecursively(coderoot, '**/*.cpp')
     searchFilesRecursively(coderoot, '**/*.c')
