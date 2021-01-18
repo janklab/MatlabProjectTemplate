@@ -89,7 +89,6 @@ perl -spi -e "s/command: .\/MatlabProjectTemplate\/test_project_initialization/c
   ./.circleci/config.yml
 perl -spi -e "s/- .\/MatlabProjectTemplate\/test_project_initialization//" \
   .travis.yml
-perl -0pi -e 's/# start-template-internal.*# end-template-internal//smg' Makefile
 
 rm -rf doc-src doc/*
 cp -R doc-src-$DOCSITETOOL doc-src
