@@ -1,6 +1,6 @@
 # MatlabProjectTemplate
 
-![Travis Build Status](https://travis-ci.com/janklab/MatlabProjectTemplate.svg?branch=main)  [![CircleCI Build Status](https://circleci.com/gh/janklab/MatlabProjectTemplate.svg?style=shield)](https://circleci.com/gh/janklab/MatlabProjectTemplate) [![Azure Build Status](https://dev.azure.com/janklab/MatlabProjectTemplate/_apis/build/status/janklab.MatlabProjectTemplate?branchName=main)](https://dev.azure.com/janklab/MatlabProjectTemplate/_build/latest?definitionId=1&branchName=main)
+[![Travis Build Status](https://travis-ci.com/janklab/MatlabProjectTemplate.svg?branch=main)](https://travis-ci.com/github/janklab/MatlabProjectTemplate)  [![CircleCI Build Status](https://circleci.com/gh/janklab/MatlabProjectTemplate.svg?style=shield)](https://circleci.com/gh/janklab/MatlabProjectTemplate) [![Azure Build Status](https://dev.azure.com/janklab/MatlabProjectTemplate/_apis/build/status/janklab.MatlabProjectTemplate?branchName=main)](https://dev.azure.com/janklab/MatlabProjectTemplate/_build/latest?definitionId=1&branchName=main)
 
 This is a template repo for creating Matlab library and application projects. It defines a "standard" project structure that should be suitable for many projects, including those intended for redistribution / open source.
 
