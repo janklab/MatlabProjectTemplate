@@ -84,12 +84,13 @@ mv dev-kit/buildallmexfiles_in_mypackage.m dev-kit/buildallmexfiles_in_${PACKAGE
 mv MatlabProjectTemplate/project-README.md README.md
 mungefiles=".gitignore Makefile *.md */*.md */*.adoc */*.yml myproject.prj.in *.m */*.m */*/*.m */*/*/*.m src/java/*/*.xml azure-pipelines.yml dev-kit/* CHANGES.txt "
 perl -spi -e "s/__myproject__/$PROJECT/g" $mungefiles
-perl -spi -e "s/myproject/$PROJECT/g" $mungefiles
-perl -spi -e "s/mypackage/$PACKAGE/g" $mungefiles
 perl -spi -e "s/__myprojectemail__/$PROJECT_EMAIL/g" $mungefiles
 perl -spi -e "s/__myprojectguid__/$PROJECT_GUID/g" $mungefiles
 perl -spi -e "s/__myproject_matlab_version__/$PROJECT_MATLAB_VERSION/g" $mungefiles
 perl -spi -e "s/__myghuser__/$GHUSER/g" $mungefiles
+perl -spi -e "s/myproject/$PROJECT/g" $mungefiles
+perl -spi -e "s/mypackage/$PACKAGE/g" $mungefiles
+perl -spi -e "s/myghuser/$GHUSER/g" $mungefiles
 perl -spi -e "s/command: .\/MatlabProjectTemplate\/test_project_initialization/command: echo Hello world/g" \
   ./.circleci/config.yml
 perl -spi -e "s/- .\/MatlabProjectTemplate\/test_project_initialization//" \
