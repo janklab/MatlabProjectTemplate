@@ -22,7 +22,7 @@ test:
 
 .PHONY: build
 build:
-	./dev-kit/build_myproject
+	./dev-kit/build_mypackage
 
 .PHONY: doc
 doc:
