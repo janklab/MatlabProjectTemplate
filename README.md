@@ -60,30 +60,3 @@ MatlabProjectTemplate is multi-licensed under all of: MIT License, BSD 2-Clause 
 MatlabProjectTemplate was written by [Andrew Janke](https://apjanke.net). The project home page is <https://github.com/janklab/MatlabProjectTemplate>. You can get support, or even contribute to the project, there.
 
 See the [FAQ](https://github.com/janklab/MatlabProjectTemplate/blob/main/MatlabProjectTemplate/doc/FAQ.md) or the stuff in the `MatlabProjectTemplate/doc` directory for more info.
-
-## That's all, folks!
-
-Info about your own project starts here!
-
-----------------------------------------------------------------------------
-# __myproject__
-
-## About
-
-Describe your project!
-
-## Installation
-
-To install __myproject__, download it from the [Releases page](https://github.com/__myghuser__/__myproject__/releases) or clone the [repo](https://github.com/__myghuser__/__myproject__) to get it on your disk. Then add its `Mcode/` folder to your Matlab path.
-
-## Usage
-
-### Examples
-
-## Author
-
-__myproject__ is written and maintained by [YOUR-NAME-HERE](https://your-website.com). The project home page is <https://github.com/__myghuser__/__myproject__>.
-
-## Acknowledgments
-
-This project was created with [MatlabProjectTemplate](https://github.com/apjanke/MatlabProjectTemplate) by [Andrew Janke](https://apjanke.net).
