@@ -47,3 +47,7 @@ remote: GitHub found 7 vulnerabilities on janklab/MatlabProjectTemplate's defaul
 ```
 
 This is because the Java project for custom Java code declares dependencies on some of the Java libraries that Matlab ships with, and they are old versions with vulnerabilities. There is nothing we can do about this, because we're stuck with the library versions that Matlab uses.
+
+## How about support for Git submodules for pulling in dependencies under lib/?
+
+No. Git submodules suck, and are difficult for even experienced software developers to use. Stick with just copying the library distributions into `lib/`.
