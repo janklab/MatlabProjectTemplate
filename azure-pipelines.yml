@@ -1,6 +1,4 @@
 pool: myproject
-InstallMATLAB:
-  release: R2020a
 steps:
   - task: RunMATLABCommand@0
     inputs:
