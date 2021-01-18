@@ -55,4 +55,5 @@ clean:
 .PHONY: rollback-init
 rollback-init:
 	git reset --hard
-	rm -rf M-doc doc-src Mcode/+mycoolpackage doc/* src/java/MyProject-java/src/main/java/com/example/mycoolpackage
+	rm -rf M-doc Mcode/+mycoolpackage doc/* src/java/MyProject-java/src/main/java/com/example/mycoolpackage
+	git reset --hard
