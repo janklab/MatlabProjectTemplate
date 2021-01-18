@@ -29,10 +29,12 @@ classdef SomeClass < SomeOtherClass
 
 end
 
-function anExampleFunction(foo, bar)
+function anExampleFunction(foo, bar, baz, qux)
   arguments
-    foo (1,1) double
-    bar string = "whatever"
+    foo
+    bar (1,1) double
+    baz string = "whatever"
+    qux string = "foo" {mustBeMember(qux, ["foo" "bar" "baz"])}
   end
 
   fprintf('Hello, world!\n')
