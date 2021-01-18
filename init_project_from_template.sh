@@ -47,6 +47,9 @@ function locate-matlab-on-mac() {
   fi
 }
 
+echo ""
+echo "Initializing project $PROJECT"
+
 uname=$(uname)
 if [[ $uname == "Darwin" ]]; then
   locate-matlab-on-mac
