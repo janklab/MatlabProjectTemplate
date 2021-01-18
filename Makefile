@@ -14,7 +14,7 @@
 PROGRAM=myproject
 VERSION=$(shell cat VERSION)
 DIST=dist/${PROGRAM}-${VERSION}
-DISTFILES=Mcode doc lib tests examples README.md LICENSE CHANGES.txt
+DISTFILES=Mcode doc lib examples README.md LICENSE CHANGES.txt
 
 .PHONY: test
 test:
