@@ -1,4 +1,4 @@
-# <project> TODO
+# myproject TODO
 
 Put your TODOs here!
 
