@@ -19,9 +19,9 @@ jobs:
           path: test-results
       - run:
           command: make test
-# These are commented out because they don't work in an uninitialized template.
-# Feel free to uncomment them!
-#      - run:
-#          command: make dist
-#      - run:
-#          command: make toolbox
+      - run:
+          command: make dist
+      - run:
+          command: make clean
+      - run:
+          command: ./MatlabProjectTemplate/test_project_initialization

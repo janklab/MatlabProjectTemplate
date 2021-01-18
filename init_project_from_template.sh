@@ -84,6 +84,8 @@ perl -spi -e "s/__myprojectemail__/$PROJECT_EMAIL/g" $mungefiles
 perl -spi -e "s/__myprojectguid__/$PROJECT_GUID/g" $mungefiles
 perl -spi -e "s/__myproject_matlab_version__/$PROJECT_MATLAB_VERSION/g" $mungefiles
 perl -spi -e "s/__myghuser__/$GHUSER/g" $mungefiles
+perl -spi -e "s/command: .\/MatlabProjectTemplate\/test_project_initialization/command: echo Hello world/g" \
+  ./.circleci/config.yml
 
 rm -rf doc-src doc/*
 cp -R doc-src-$DOCSITETOOL doc-src
