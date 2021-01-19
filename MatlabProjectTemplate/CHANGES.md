@@ -1,6 +1,12 @@
 MatlabProjectTemplate Changelog
 ===============================
 
+Version 0.2.1 (2021-01-19)
+--------------------------
+
+* Fix project name in info.xml for Toolbox generation
+* Automatic munging of Matlab version in metadata files
+
 Version 0.2.0 (2021-01-17)
 --------------------------
 
