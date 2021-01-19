@@ -35,7 +35,7 @@ m-doc: doc
 	rm -f build/M-doc/feed.xml
 
 .PHONY: toolbox
-toolbox:
+toolbox: m-doc
 	bash package_toolbox.sh
 
 .PHONY: dist
