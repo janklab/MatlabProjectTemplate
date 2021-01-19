@@ -5,6 +5,7 @@ Version 0.2.3 (in progress)
 --------------------------
 
 * Refine how settings are initialized
+* Fix toolbox build failure due to missing M-doc dependency
 
 Version 0.2.2 (2021-01-19)
 --------------------------
