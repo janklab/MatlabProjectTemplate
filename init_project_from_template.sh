@@ -91,6 +91,7 @@ perl -spi -e "s/__myghuser__/$GHUSER/g" $mungefiles
 perl -spi -e "s/myproject/$PROJECT/g" $mungefiles
 perl -spi -e "s/mypackage/$PACKAGE/g" $mungefiles
 perl -spi -e "s/myghuser/$GHUSER/g" $mungefiles
+perl -spi -e "s/R2019b/$PROJECT_MATLAB_VERSION/g" myproject.prj.in .matlab_version
 perl -spi -e "s/command: .\/MatlabProjectTemplate\/test_project_initialization/command: echo Hello world/g" \
   ./.circleci/config.yml
 perl -spi -e "s/- .\/MatlabProjectTemplate\/test_project_initialization//" \
