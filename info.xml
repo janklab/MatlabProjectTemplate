@@ -4,7 +4,7 @@
     <?xml-stylesheet type="text/xsl"href="optional"?>
     
     <matlabrelease>2019b</matlabrelease>
-    <name>Janklab</name>
+    <name>myproject</name>
     <type>toolbox</type>
     <icon/>
     <help_location>build/M-doc</help_location>
