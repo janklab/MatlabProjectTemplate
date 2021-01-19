@@ -7,4 +7,18 @@ classdef Settings < mypackage.internal.MypackageBaseHandle
   properties
   end
 
+  methods (Static=true)
+
+    function out = discover()
+      % Discovery of initial values for package settings.
+      %
+      % This could look at config files, environment variables, Matlab appdata, and
+      % so on.
+      %
+      % This needs to avoid referencing mypackage.globals, to avoid a circular dependency.
+      out = mypackage.Settings;
+    end
+
+  end
+
 end

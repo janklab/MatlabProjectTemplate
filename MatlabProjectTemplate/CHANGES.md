@@ -1,6 +1,11 @@
 MatlabProjectTemplate Changelog
 ===============================
 
+Version 0.2.3 (in progress)
+--------------------------
+
+* Refine how settings are initialized
+
 Version 0.2.2 (2021-01-19)
 --------------------------
 

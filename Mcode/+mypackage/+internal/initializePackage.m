@@ -1,7 +1,13 @@
 function initializePackage
+% Basic package initialization
+%
+% This should *only* do basic library initialization involving paths and dependency
+% loading and the like. It should *not* discover initial values for library settings;
+% that's done in mypackage.Settings.discover. It has to be that way so the package
+% settings state can handle a `clear classes` gracefully.
 
 % Do not re-initialize if already initialized
-if getappdata(0, 'mypackage_is_initialized')
+if mypackage.internal.util.getpackageappdata('initialized')
   return
 end
 
@@ -46,7 +52,7 @@ end
 
 % Mark library as initialized
 
-setappdata(0, 'mypackage_is_initialized', true);
+mypackage.internal.util.getpackageappdata('initialized');
 
 end
 

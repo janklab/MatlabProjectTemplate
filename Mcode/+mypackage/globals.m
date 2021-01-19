@@ -16,7 +16,7 @@ classdef globals
     % Path to the root directory of this __myproject__ distribution
     distroot = string(fileparts(fileparts(fileparts(mfilename('fullpath')))));
     % Global settings for mypackage.
-    settings = mypackage.Settings
+    settings = mypackage.Settings.discover
   end
   
   methods (Static)
