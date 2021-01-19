@@ -1,9 +1,22 @@
 classdef globals
-  % Global library properties and settings for SLF4M
+  % Global library properties and settings for myproject.
+  %
+  % Note that if you want to change the settings, you can't do this:
+  %
+  %    mypackage.globals.settings.someSetting = 42;
+  %
+  % That will break due to how Matlab Constant properties work. Instead, you need
+  % to first grab the Settings object and store it in a variable, and then work
+  % on that:
+  %
+  %    s = mypackage.globals.settings;
+  %    s.someSetting = 42;
   
   properties (Constant)
     % Path to the root directory of this __myproject__ distribution
     distroot = string(fileparts(fileparts(fileparts(mfilename('fullpath')))));
+    % Global settings for mypackage.
+    settings = mypackage.Settings
   end
   
   methods (Static)
