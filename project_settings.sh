@@ -2,7 +2,7 @@
 
 # The name of your project and its GitHub repo. Capitalization should match what
 # your public "branding" is; this will show up in human-readable documentation.
-PROJECT=MyProject
+PROJECT=MyCoolProject
 
 # The version of Matlab you're developing against. This will be the version of
 # Matlab that the project builds against (on Mac and Windows anyway), and the minimum

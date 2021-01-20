@@ -62,8 +62,8 @@ clean:
 rollback-init:
 	git reset --hard
 	rm -rf M-doc Mcode/+mycoolpackage doc-src/* doc/* \
-	    src/java/MyProject-java/src/main/java/com/example/mycoolpackage \
-			dev-kit/*mycoolpackage*
+	    src/java/MyCoolProject-java/src/main/java/com/example/mycoolpackage \
+			dev-kit/*mycoolpackage* MyCoolProject.mltbx MyCoolProject.prj.in 
 	git reset --hard
 
 # end-template-internal
