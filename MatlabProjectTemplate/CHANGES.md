@@ -8,6 +8,7 @@ Version 0.2.3 (in progress)
 * More project metadata options
 * Refine how settings are initialized
 * Fix toolbox build failure due to missing M-doc dependency
+* Add a gh-pages doco building option
 
 Version 0.2.2 (2021-01-19)
 --------------------------
