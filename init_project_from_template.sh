@@ -67,6 +67,8 @@ if [[ $? != 0 ]]; then
   exit 1
 fi
 
+# TODO: Validate that summary and description do not contain <, >, or &
+
 # Munge the source code and documentation
 
 mv Mcode/+mypackage/+internal/MypackageBase.m Mcode/+mypackage/+internal/${PACKAGE_CAP}Base.m
@@ -82,12 +84,15 @@ mv dev-kit/launchtests_mypackage.m dev-kit/launchtests_${PACKAGE}.m
 mv dev-kit/buildallmexfiles_in_mypackage.m dev-kit/buildallmexfiles_in_${PACKAGE}
 
 mv MatlabProjectTemplate/project-README.md README.md
-mungefiles=".gitignore Makefile *.md */*.md */*.adoc */*.yml myproject.prj.in *.m */*.m */*/*.m */*/*/*.m src/java/*/*.xml azure-pipelines.yml dev-kit/* CHANGES.txt info.xml"
+mungefiles=".gitignore Makefile *.md */*.md */*.adoc */*.yml myproject.prj.in *.m */*.m */*/*.m */*/*/*.m src/java/*/*.xml azure-pipelines.yml dev-kit/* CHANGES.txt info.xml doc-project/*.txt doc-project/*.md"
 perl -spi -e "s/__myproject__/$PROJECT/g" $mungefiles
 perl -spi -e "s/__myprojectemail__/$PROJECT_EMAIL/g" $mungefiles
 perl -spi -e "s/__myprojectguid__/$PROJECT_GUID/g" $mungefiles
 perl -spi -e "s/__myproject_matlab_version__/$PROJECT_MATLAB_VERSION/g" $mungefiles
 perl -spi -e "s/__myghuser__/$GHUSER/g" $mungefiles
+perl -spi -e "s/__YOUR_NAME_HERE__/$PROJECT_AUTHOR/g" $mungefiles
+perl -spi -e "s/__myproject_summary__/$PROJECT_SUMMARY/g" $mungefiles
+perl -spi -e "s/__myproject_description__/$PROJECT_DESCRIPTION/g" $mungefiles
 perl -spi -e "s/myproject/$PROJECT/g" $mungefiles
 perl -spi -e "s/mypackage/$PACKAGE/g" $mungefiles
 perl -spi -e "s/myghuser/$GHUSER/g" $mungefiles

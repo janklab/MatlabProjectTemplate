@@ -4,6 +4,7 @@ MatlabProjectTemplate Changelog
 Version 0.2.3 (in progress)
 --------------------------
 
+* More project metadata options
 * Refine how settings are initialized
 * Fix toolbox build failure due to missing M-doc dependency
 

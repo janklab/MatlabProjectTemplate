@@ -4,9 +4,11 @@ layout: default
 
 # __myproject__ Documentation
 
+__myproject_summary__
+
 ## About
 
-Describe your project!
+__myproject_description__
 
 ## Installation
 
@@ -47,7 +49,7 @@ Some of the documentation pages use AsciiDoc. See [here](Use-AsciiDoc/index.html
 
 ## Author
 
-__myproject__ is written and maintained by [YOUR-NAME-HERE](https://your-website.com). The project home page is <https://github.com/__myghuser__/__myproject__>.
+__myproject__ is written and maintained by [__YOUR_NAME_HERE__](https://your-website.com). The project home page is <https://github.com/__myghuser__/__myproject__>.
 
 ## Acknowledgments
 

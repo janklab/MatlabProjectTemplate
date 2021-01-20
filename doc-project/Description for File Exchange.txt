@@ -8,9 +8,9 @@ just copy and paste.
 
 Summary:
 
-<One-line summary of myproject>
+__myproject_summary__
 
 
 Description:
 
-<Full text to go in the Description field on File Exchange for this project>
+__myproject_description__

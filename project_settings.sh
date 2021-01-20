@@ -22,5 +22,17 @@ GHUSER=mygithubusername
 PROJECT_EMAIL=
 
 # The site generator tool you want to use for the project documentation.
-# Valid choices are "jekyll" and  "mkdocs"
+# Valid choices are "jekyll" and  "mkdocs".
 DOCSITETOOL=jekyll
+
+# Human-readable name of the project's primary author or maintainer
+PROJECT_AUTHOR="Your Name Here"
+
+# Everything below here is optional! If you omit it, you'll end up with placeholder text
+# in some of your documentation, but the project will still work
+
+# One-sentence summary of the project. No <, >, or & characters allowed!
+PROJECT_SUMMARY="Short summary of project goes here"
+
+# Multi-sentence project description. No <, >, or & characters allowed!
+PROJECT_DESCRIPTION="Longer description of project goes here."
