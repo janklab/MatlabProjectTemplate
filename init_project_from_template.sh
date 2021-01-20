@@ -50,6 +50,12 @@ function locate-matlab-on-mac() {
 echo ""
 echo "Initializing project $PROJECT"
 
+if [[ ! -d "doc-src-$DOCSITETOOL" ]]; then
+  echo >&2 "Error: invalid choice for DOCSITETOOL: $DOCSITETOOL"
+  echo >&2 "Valid choices are: jekyll, mkdocs, gh-pages"
+  exit 1
+fi
+
 uname=$(uname)
 if [[ $uname == "Darwin" ]]; then
   locate-matlab-on-mac
@@ -103,8 +109,8 @@ perl -spi -e "s/command: .\/MatlabProjectTemplate\/test_project_initialization/c
 perl -spi -e "s/- .\/MatlabProjectTemplate\/test_project_initialization//" \
   .travis.yml
 
-rm -rf doc-src doc/*
-cp -R doc-src-$DOCSITETOOL doc-src
+rm -rf docs doc/*
+cp -R doc-src-$DOCSITETOOL docs
 rm -rf doc-src-*
 
 echo $PROJECT_MATLAB_VERSION > .matlab_version

@@ -25,7 +25,12 @@ GHUSER=mygithubusername
 PROJECT_EMAIL=
 
 # The site generator tool you want to use for the project documentation.
-# Valid choices are "jekyll" and  "mkdocs".
+# Valid choices are:
+#   "jekyll"   - Jeyll for building local docs
+#   "mkdocs"   - mkdocs for building local docs
+#   "gh-pages" - Jekyll for both GitHub Pages hosting and local docs
+# If you have a large project, you should stick with "jekyll" or "mkdocs" and put your
+# main GitHub Pages website in a separate repo.
 DOCSITETOOL=jekyll
 
 # Human-readable name of the project's primary author or maintainer

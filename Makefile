@@ -8,8 +8,8 @@
 #   make toolbox - Build the project as a Matlab Toolbox .mltbx file
 #   make dist - Build the project distribution zip files
 #   make java - Build your custom Java code in src/ and install it into lib/
-
-# TODO: Should make dist have a dependency on make doc?
+#   make doc-src - Build derived Markdown files in docs/
+#   make clean - Remove derived files
 
 PROGRAM=myproject
 VERSION=$(shell cat VERSION)
@@ -24,9 +24,17 @@ test:
 build:
 	./dev-kit/build_mypackage
 
+# Build the programmatically-generated parts of the _source_ files for the doco
+.PHONY: docs
+docs:
+	rm -rf docs/examples
+	cp -R examples docs
+
+# Build the actual output documents
 .PHONY: doc
-doc:
-	cd doc-src && ./make_doc
+doc: docs
+	cd docs && ./make_doc
+
 .PHONY: m-doc
 m-doc: doc
 	rm -rf build/M-doc
@@ -36,7 +44,7 @@ m-doc: doc
 
 .PHONY: toolbox
 toolbox: m-doc
-	bash ./dev-kit/package_mypackage_toolbox.sh
+	./dev-kit/package_mypackage_toolbox
 
 .PHONY: dist
 dist: build m-doc
@@ -53,7 +61,11 @@ java:
 
 .PHONY: clean
 clean:
-	rm -rf dist/* build doc-src/site doc-src/_site M-doc
+	rm -rf dist/* build docs/site docs/_site M-doc
+
+.PHONY: simplify
+simplify:
+	rm -rf .circleci .travis.yml azure-pipelines.yml src lib/java/myproject-java
 
 # start-template-internal
 
@@ -61,7 +73,7 @@ clean:
 .PHONY: rollback-init
 rollback-init:
 	git reset --hard
-	rm -rf M-doc Mcode/+mycoolpackage doc-src/* doc/* \
+	rm -rf M-doc Mcode/+mycoolpackage docs/* doc/* \
 	    src/java/MyCoolProject-java \
 			dev-kit/*mycoolpackage* dev-kit/*MyCoolProject* MyCoolProject.mltbx MyCoolProject.prj.in \
 			mycoolpackage*
