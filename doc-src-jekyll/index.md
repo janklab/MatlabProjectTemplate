@@ -49,7 +49,7 @@ Some of the documentation pages use AsciiDoc. See [here](Use-AsciiDoc/index.html
 
 ## Author
 
-__myproject__ is written and maintained by [__YOUR_NAME_HERE__](https://your-website.com). The project home page is <https://github.com/__myghuser__/__myproject__>.
+__myproject__ is written and maintained by [__YOUR_NAME_HERE__](__author_homepage__). The project home page is <https://github.com/__myghuser__/__myproject__>.
 
 ## Acknowledgments
 

@@ -19,7 +19,7 @@ To install __myproject__, download it from the [Releases page](https://github.co
 
 ## Author
 
-__myproject__ is written and maintained by [__YOUR_NAME_HERE__](https://your-website.com). The project home page is <https://github.com/__myghuser__/__myproject__>.
+__myproject__ is written and maintained by [__YOUR_NAME_HERE__](__author_homepage__). The project home page is <https://github.com/__myghuser__/__myproject__>.
 
 ## Acknowledgments
 

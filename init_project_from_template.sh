@@ -91,6 +91,8 @@ perl -spi -e "s/__myghuser__/$GHUSER/g" $mungefiles
 perl -spi -e "s/__YOUR_NAME_HERE__/$PROJECT_AUTHOR/g" $mungefiles
 perl -spi -e "s/__myproject_summary__/$PROJECT_SUMMARY/g" $mungefiles
 perl -spi -e "s/__myproject_description__/$PROJECT_DESCRIPTION/g" $mungefiles
+# TODO: This doesn't work because homepage may contain slashes!
+#perl -spi -e "s/__author_homepage__/$AUTHOR_HOMEPAGE/g" $mungefiles
 perl -spi -e "s/myproject/$PROJECT/g" $mungefiles
 perl -spi -e "s/mypackage/$PACKAGE/g" $mungefiles
 perl -spi -e "s/myghuser/$GHUSER/g" $mungefiles

@@ -34,8 +34,11 @@ PROJECT_AUTHOR="Your Name Here"
 # Everything below here is optional! If you omit it, you'll end up with placeholder text
 # in some of your documentation, but the project will still work
 
-# One-sentence summary of the project. No <, >, or & characters allowed!
+# One-sentence summary of the project. No <, >, /, or & characters allowed!
 PROJECT_SUMMARY="Short summary of project goes here"
 
-# Multi-sentence project description. No <, >, or & characters allowed!
+# Multi-sentence project description. No <, >, /, or & characters allowed!
 PROJECT_DESCRIPTION="Longer description of project goes here."
+
+# Home page web site for the project's author
+AUTHOR_HOMEPAGE="https://github.com/$GHUSER"
