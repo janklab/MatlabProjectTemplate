@@ -4,6 +4,7 @@ MatlabProjectTemplate Changelog
 Version 0.2.3 (in progress)
 --------------------------
 
+* Move more build tools into dev-kit/ to clean up the root directory
 * More project metadata options
 * Refine how settings are initialized
 * Fix toolbox build failure due to missing M-doc dependency

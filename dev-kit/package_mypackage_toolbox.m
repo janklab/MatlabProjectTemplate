@@ -1,11 +1,11 @@
-function package_toolbox
+function package_mypackage_toolbox
 % Packages this toolbox as a Matlab Toolbox .mltbx file
 %
-% package_toolbox
+% package_mypackage_toolbox
 %
-% The project must be loaded on to the Matlab path in order for this to work.
+% The package must be loaded on to the Matlab path in order for this to work.
 
-tbxInfo = toolbox_info;
+tbxInfo = mypackage_toolbox_info;
 tbxName = tbxInfo.name;
 
 if ~isfolder('dist')

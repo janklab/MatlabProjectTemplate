@@ -1,4 +1,7 @@
 # Edit these variables to for your project
+#
+# This file is only used during project initialization. You can throw it away after
+# that, but I'd keep it around anyway, just in case.
 
 # The name of your project and its GitHub repo. Capitalization should match what
 # your public "branding" is; this will show up in human-readable documentation.

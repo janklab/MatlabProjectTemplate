@@ -36,7 +36,7 @@ m-doc: doc
 
 .PHONY: toolbox
 toolbox: m-doc
-	bash package_toolbox.sh
+	bash ./dev-kit/package_mypackage_toolbox.sh
 
 .PHONY: dist
 dist: build m-doc
@@ -62,8 +62,9 @@ clean:
 rollback-init:
 	git reset --hard
 	rm -rf M-doc Mcode/+mycoolpackage doc-src/* doc/* \
-	    src/java/MyCoolProject-java/src/main/java/com/example/mycoolpackage \
-			dev-kit/*mycoolpackage* MyCoolProject.mltbx MyCoolProject.prj.in 
+	    src/java/MyCoolProject-java \
+			dev-kit/*mycoolpackage* dev-kit/*MyCoolProject* MyCoolProject.mltbx MyCoolProject.prj.in \
+			mycoolpackage*
 	git reset --hard
 
 # end-template-internal

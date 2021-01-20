@@ -1,6 +1,6 @@
 #!env bash
 #
-# package_toolbox.sh - Package this project as a toolbox
+# package_myproject_toolbox.sh - Package this project as a toolbox
 
 uname=$(uname)
 
@@ -15,4 +15,4 @@ case "$uname" in
     ;;
 esac
 
-"$MATLAB" -batch 'batch_package_toolbox'
+"$MATLAB" -batch "addpath('dev-kit'); batch_package_mypackage_toolbox"

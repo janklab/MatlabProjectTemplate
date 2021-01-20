@@ -1,4 +1,4 @@
-function out = toolbox_info
+function out = mypackage_toolbox_info
 % Info about your toolbox, for use during the build
 %
 % This is the file you edit to have your toolbox-specific information.
