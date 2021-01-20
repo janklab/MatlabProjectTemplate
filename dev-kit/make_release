@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+#
+# make_release <version>
+#
+# Make a release.
+
+version="$1"
+
+if [[ ! -d 'myproject.prj.in' ]]; then
+  echo >&2 "Error: this script must be run from the root of the repo"
+  exit 1
+fi
+
+echo "Creating release $version"
+
+if [[ ! -z "$(git status --porcelain) ]]; then
+  echo >&2 "Error: Your repo is not clean! There are local changes. No release for you!"
+  exit 1
+fi
+
+# TODO: Check for pending remote changes
+
+function must () {
+  echo "$@"
+  if ! "$@"; then
+    echo >&2 "Step failed. No release for you!"
+    exit 1
+  fi
+}
+
+# First run the tests before we make any changes
+
+echo "Running tests..."
+must make test
+
+# Okay, let's to the release
+
+must echo "$version" > VERSION
+
+echo "Regenerating doco..."
+must make doc
+
+echo "Building dist..."
+must make dist
+must make toolbox
+
+echo "Tagging release..."
+must git commit -a -m "Version $version"
+must git tag "-v$version"
+must echo "${version}+" >VERSION
+must git commit -a -m "Open development for next release"
+must git push
+must git push --tags
+
+echo "Release is pushed! Now go to GitHub and draft the actual Release:"
+echo "   https://github.com/myghuser/myproject/releases"
+uname=$(uname)
+if [[ $uname = "Darwin" ]]; then
+  open "https://github.com/myghuser/myproject/releases"
+fi
