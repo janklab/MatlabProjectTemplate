@@ -45,7 +45,7 @@ And then:
 
 When you're developing code for your project, you should add the `dev-kit/` directory to your Matlab path.
 
-See `MatlabProjectTemplate/README.md` and other documents in the `MatlabProjectTemplate/` directory for more information and details.
+See the [User Guide](https://matlabprojecttemplate.janklab.net/UserGuide.html) for more information.
 
 ## Unit tests
 
