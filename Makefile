@@ -12,7 +12,7 @@
 #   make clean - Remove derived files
 
 PROGRAM=MyCoolProject
-VERSION="$(shell cat VERSION)""
+VERSION="$(shell cat VERSION)"
 DIST="dist/${PROGRAM}-${VERSION}"
 DISTFILES=build/Mcode doc lib examples README.md LICENSE CHANGES.txt
 
