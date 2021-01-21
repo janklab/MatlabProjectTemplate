@@ -17,7 +17,7 @@ MatlabProjectTemplate supports the following features. You don't _have_ to use a
 * Using ("vendoring") third-party Java JAR and Matlab libraries
 * Custom Java code
 * Library initialization
-* _Automatic_ library initialization
+* [_Automatic_](https://matlabprojecttemplate.janklab.net/AutoInitialization.html) library initialization
 * Logging, in an [SLF4M](https://github.com/janklab/SLF4M)/SLF4J/Log4j-compatible manner
 
 ## Requirements
