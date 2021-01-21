@@ -1,6 +1,11 @@
 MatlabProjectTemplate Changelog
 ===============================
 
+Version 0.3.2 (2021-01-20)
+--------------------------
+
+* Fix make_release's release creation
+
 Version 0.3.0 (2021-01-20)
 --------------------------
 
