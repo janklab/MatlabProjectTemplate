@@ -56,21 +56,27 @@ dist: build m-doc
 
 .PHONY: java
 java:
-	cd src/java/MyCoolProject-java; mvn package
-	mkdir -p lib/java/MyCoolProject-java
-	cp src/java/MyCoolProject-java/target/*.jar lib/java/MyCoolProject-java
+	cd src/java/myproject-java; mvn package
+	mkdir -p lib/java/myproject-java
+	cp src/java/myproject-java/target/*.jar lib/java/myproject-java
 
 .PHONY: clean
 clean:
 	rm -rf dist/* build docs/site docs/_site M-doc test-output
 
+# Run this _after_ initialization if you want to throw away some nonessential
+# features to make your repo layout simpler.
 .PHONY: simplify
 simplify:
 	rm -rf .circleci .travis.yml azure-pipelines.yml src lib/java/MyCoolProject-java
 
 # start-template-internal
 
-# This is for MatlabProjectTemplate's internal use. Don't call it yourself.
+# These targets is for MatlabProjectTemplate's internal use. Don't call them yourself.
+# You can and should just delete this section after your project is initialized.
+# (I can't do that for you because I actually need these targets *after* project
+# initialization for work on MatlabProjectTemplate.)
+
 .PHONY: rollback-init
 rollback-init:
 	git reset --hard
