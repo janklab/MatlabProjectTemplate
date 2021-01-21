@@ -114,6 +114,7 @@ cp -R doc-src-$DOCSITETOOL docs
 rm -rf doc-src-*
 
 echo $PROJECT_MATLAB_VERSION > .matlab_version
+echo "0.1.0" > VERSION
 mv myproject.prj.in $PROJECT.prj.in
 
 # Okeedoke!
