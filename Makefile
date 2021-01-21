@@ -44,7 +44,7 @@ m-doc: doc
 
 .PHONY: toolbox
 toolbox: m-doc
-	./dev-kit/package_mypackage_toolbox
+	bash ./dev-kit/package_mypackage_toolbox
 
 .PHONY: dist
 dist: build m-doc

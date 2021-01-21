@@ -1,6 +1,6 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration file="./__myproject__.prj" location="." name="__myproject__" target="target.toolbox" target-name="Package Toolbox">
-    <param.appname>__myproject__</param.appname>
+  <configuration file="./myproject.prj" location="." name="__myproject__" target="target.toolbox" target-name="Package Toolbox">
+    <param.appname>myproject</param.appname>
     <param.authnamewatermark>__YOUR_NAME_HERE__</param.authnamewatermark>
     <param.email>__myprojectemail__</param.email>
     <param.company></param.company>
@@ -8,7 +8,7 @@
     <param.description>__myproject_description__</param.description>
     <param.screenshot />
     <param.version>${PROJECT_VERSION}</param.version>
-    <param.output>${PROJECT_ROOT}/__myproject__.mltbx</param.output>
+    <param.output>${PROJECT_ROOT}/myproject.mltbx</param.output>
     <param.products.name />
     <param.products.id />
     <param.products.version />

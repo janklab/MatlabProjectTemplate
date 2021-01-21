@@ -13,5 +13,5 @@ function out = mypackage_toolbox_info
 % The version may have "-[\w+]" suffixes in addition to the standard
 % "0.0[.0[.0]]" numeric version format.
 
-out.name = '__myproject__';
+out.name = 'myproject';
 out.version = mypackage.globals.version;
