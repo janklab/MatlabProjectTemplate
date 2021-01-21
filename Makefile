@@ -83,7 +83,7 @@ rollback-init:
 	rm -rf M-doc Mcode/+mycoolpackage docs/* doc/* \
 	    src/java/MyCoolProject-java \
 			dev-kit/*mycoolpackage* dev-kit/*MyCoolProject* MyCoolProject.mltbx MyCoolProject.prj.in \
-			mycoolpackage*
+			mycoolpackage* lib/java/MyCoolProject-java
 	git reset --hard
 
 # end-template-internal
