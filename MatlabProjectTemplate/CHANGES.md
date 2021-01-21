@@ -1,7 +1,12 @@
 MatlabProjectTemplate Changelog
 ===============================
 
-Version 0.3.5 (in progress)
+Version 0.3.6 (in progress)
+---------------------------
+
+
+
+Version 0.3.5 (2021-01-21)
 ---------------------------
 
 * Remove the `.sh` suffix from `init_project_from_template`; its language is an internal implementation detail
