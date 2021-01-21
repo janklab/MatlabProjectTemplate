@@ -5,6 +5,7 @@ Version 0.3.5 (in progress)
 ---------------------------
 
 * Remove the `.sh` suffix from `init_project_from_template`; its language is an internal implementation detail
+* Clean up internal MPT dev targets from Makefile
 
 Version 0.3.4 (2021-01-20)
 --------------------------
