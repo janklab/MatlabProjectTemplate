@@ -26,7 +26,9 @@ Some features, including project initialization, only work on Mac and Linux. But
 
 ## Usage
 
-To create a new project from this template, go on GitHub, create a new repo, and select this repo as its template.
+To create a new project from this template, go to [its repo on GitHub](https://github.com/janklab/MatlabProjectTemplate) and create a new repo by clicking the green "Use this template" button.
+
+NOTE: Don't "fork" or "clone" the MatlabProjectTemplate repo. That will leave your project's Git repo set up wrong! Do the "Use this template" thing.
 
 Then:
 
