@@ -88,7 +88,7 @@ for f in *mypackage* dev-kit/*mypackage*; do
 done
 
 mv MatlabProjectTemplate/project-README.md README.md
-mungefiles=".gitignore Makefile *.md */*.md */*.adoc */*.yml myproject.prj.in *.m */*.m */*/*.m */*/*/*.m src/java/*/*.xml azure-pipelines.yml .travis.yml .circleci/config.yml dev-kit/* CHANGES.txt info.xml doc-project/*.txt doc-project/*.md"
+mungefiles=".gitignore Makefile *.md */*.md */*.adoc */*.yml myproject.prj.in *.m */*.m */*/*.m */*/*/*.m */*/*/*/*.m src/java/*/*.xml src/java/*/*/*/*/*/*/*/*.java azure-pipelines.yml .travis.yml .circleci/config.yml dev-kit/* CHANGES.txt info.xml doc-project/*.txt doc-project/*.md"
 perl -spi -e "s/__myproject__/$PROJECT/g" $mungefiles
 perl -spi -e "s/__myprojectemail__/$PROJECT_EMAIL/g" $mungefiles
 perl -spi -e "s/__myprojectguid__/$PROJECT_GUID/g" $mungefiles
