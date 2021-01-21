@@ -13,7 +13,7 @@ fi
 
 echo "Creating release $version"
 
-if [[ ! -z "$(git status --porcelain) ]]; then
+if [[ ! -z "$(git status --porcelain)" ]]; then
   echo >&2 "Error: Your repo is not clean! There are local changes. No release for you!"
   exit 1
 fi
