@@ -4,7 +4,6 @@ MatlabProjectTemplate Changelog
 Version 0.3.3 (2021-01-20)
 --------------------------
 
-* Have make_release check for pending remote changes
 
 Version 0.3.2 (2021-01-20)
 --------------------------
