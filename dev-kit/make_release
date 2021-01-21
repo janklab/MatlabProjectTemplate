@@ -11,24 +11,28 @@ if [[ ! -f 'myproject.prj.in' ]]; then
   exit 1
 fi
 
-echo "Creating release $version"
-
-if [[ ! -z "$(git status --porcelain)" ]]; then
-  echo >&2 "Error: Your repo is not clean! There are local changes. No release for you!"
-  exit 1
-fi
-
-# TODO: Check for pending remote changes
-
 function must () {
   if ! "$@"; then
-    echo >&2 "Step failed. No release for you!"
+    echo >&2 "Error: Step failed. No release for you!"
     exit 1
   fi
 }
 function mark_version () {
   echo "$1" > VERSION
 }
+
+echo "Creating release $version"
+
+echo "Checking prerequisites..."
+if [[ ! -z "$(git status --porcelain)" ]]; then
+  echo >&2 "Error: Your repo is not clean! There are local changes. No release for you!"
+  exit 1
+fi
+must git remote update
+if [[ ! -z "$(git status -uno)" ]]; then
+  echo >&2 "Error: There are pending remote changes in git. No release for you!"
+  exit 1
+fi
 
 # First run the tests before we make any changes
 
