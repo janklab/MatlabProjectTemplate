@@ -5,6 +5,7 @@
 
 # The name of your project and its GitHub repo. Capitalization should match what
 # your public "branding" is; this will show up in human-readable documentation.
+# No spaces, /, or & allowed!
 PROJECT=MyCoolProject
 
 # The version of Matlab you're developing against. This will be the version of
@@ -16,6 +17,7 @@ PROJECT_MATLAB_VERSION=R2019b
 # its code in. This is the "+<package>" directory that'll be directly under Mcode,
 # and is the "namespace" that your project lives in.
 # It is conventional for package names to be in all lower case.
+# Nothing but letters allowed!
 PACKAGE=mycoolpackage
 
 # Your GitHub user name or organization name that's hosting the project
