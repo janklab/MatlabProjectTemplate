@@ -11,18 +11,18 @@
 #   make doc-src - Build derived Markdown files in docs/
 #   make clean - Remove derived files
 
-PROGRAM=myproject
+PROGRAM=MyCoolProject
 VERSION=$(shell cat VERSION)
 DIST="dist/${PROGRAM}-${VERSION}"
 DISTFILES=build/Mcode doc lib examples README.md LICENSE CHANGES.txt
 
 .PHONY: test
 test:
-	./dev-kit/launchtests_mypackage
+	./dev-kit/launchtests_mycoolpackage
 
 .PHONY: build
 build:
-	./dev-kit/build_mypackage
+	./dev-kit/build_mycoolpackage
 
 # Build the programmatically-generated parts of the _source_ files for the doco
 .PHONY: docs
@@ -44,7 +44,7 @@ m-doc: doc
 
 .PHONY: toolbox
 toolbox: m-doc
-	bash ./dev-kit/package_mypackage_toolbox
+	bash ./dev-kit/package_mycoolpackage_toolbox
 
 .PHONY: dist
 dist: build m-doc
@@ -56,17 +56,17 @@ dist: build m-doc
 
 .PHONY: java
 java:
-	cd src/java/myproject-java; mvn package
-	mkdir -p lib/java/myproject-java
-	cp src/java/myproject-java/target/*.jar lib/java/myproject-java
+	cd src/java/MyCoolProject-java; mvn package
+	mkdir -p lib/java/MyCoolProject-java
+	cp src/java/MyCoolProject-java/target/*.jar lib/java/MyCoolProject-java
 
 .PHONY: clean
 clean:
-	rm -rf dist/* build docs/site docs/_site M-doc
+	rm -rf dist/* build docs/site docs/_site M-doc test-output
 
 .PHONY: simplify
 simplify:
-	rm -rf .circleci .travis.yml azure-pipelines.yml src lib/java/myproject-java
+	rm -rf .circleci .travis.yml azure-pipelines.yml src lib/java/MyCoolProject-java
 
 # start-template-internal
 
