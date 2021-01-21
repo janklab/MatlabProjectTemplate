@@ -1,5 +1,16 @@
 # __myproject__ Release Checklist
 
+## Using the script
+
+The `dev-kit/make_release` script can take care of most of the release work for you. To use it:
+
+* Update CHANGES.md with the release date for your version.
+* Commit the changes.
+* Run `./dev-kit/make_release <version>`.
+* Go to your GitHub repo site and draft the release.
+
+## Doing a release manually
+
 * Run all the tests.
   * `make test`, duh.
   * Wouldn't hurt to do `make clean && git status && make test`/manual-cleanup, just to be sure.

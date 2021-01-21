@@ -1,7 +1,7 @@
 MatlabProjectTemplate Changelog
 ===============================
 
-Version 0.2.3 (in progress)
+Version 0.3.0 (2021-01-20)
 --------------------------
 
 * Move more build tools into dev-kit/ to clean up the root directory
