@@ -4,6 +4,7 @@ MatlabProjectTemplate Changelog
 Version 0.3.3 (2021-01-20)
 --------------------------
 
+* Fix a few missed files for munging
 
 Version 0.3.2 (2021-01-20)
 --------------------------
