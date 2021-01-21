@@ -6,7 +6,7 @@
 
 version="$1"
 
-if [[ ! -d 'myproject.prj.in' ]]; then
+if [[ ! -f 'myproject.prj.in' ]]; then
   echo >&2 "Error: this script must be run from the root of the repo"
   exit 1
 fi
