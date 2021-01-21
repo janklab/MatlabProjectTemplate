@@ -57,6 +57,7 @@ dist: build m-doc
 .PHONY: java
 java:
 	cd src/java/myproject-java; mvn package
+	mkdir -p lib/java/myproject-java
 	cp src/java/myproject-java/target/*.jar lib/java/myproject-java
 
 .PHONY: clean
