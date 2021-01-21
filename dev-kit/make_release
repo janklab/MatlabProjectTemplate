@@ -49,7 +49,7 @@ must make toolbox
 
 echo "Tagging release..."
 must git commit -a -m "Version $version"
-must git tag "-v$version"
+must git tag "v$version"
 mark_version "${version}+"
 must git commit -a -m "Open development for next release"
 must git push
