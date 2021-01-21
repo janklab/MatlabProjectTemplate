@@ -2,7 +2,7 @@
 #
 # Usage:
 #
-#    init_project_from_template.sh
+#    init_project_from_template
 #
 # You need to edit project_settings.sh and fill in some variable values before running it.
 #
@@ -126,4 +126,4 @@ echo ""
 echo "Happy hacking!"
 echo ""
 
-rm ./init_project_from_template.sh
+rm ./init_project_from_template

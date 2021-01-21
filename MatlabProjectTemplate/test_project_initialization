@@ -12,7 +12,7 @@ if [[ $(git status --porcelain) ]]; then
   exit 1
 fi
 
-./init_project_from_template.sh
+./init_project_from_template
 
 echo ""
 echo "Running tests..."

@@ -32,7 +32,7 @@ Then:
 
 * Add a license file!
 * Edit the variables `project_settings.sh`.
-* Run `init_project_from_template.sh`.
+* Run `init_project_from_template`.
 * Edit `.editorconfig` to reflect your preferred code style.
 * Edit `<myproject>.prj.in` and put in all your contact and descriptive info and other stuff.
 
