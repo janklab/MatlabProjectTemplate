@@ -21,7 +21,7 @@ fi
 # TODO: Check for pending remote changes
 
 function must () {
-  echo "$@"
+  echo "$!"
   if ! "$@"; then
     echo >&2 "Step failed. No release for you!"
     exit 1
