@@ -35,7 +35,7 @@ function mark_version () {
 echo "Running tests..."
 must make test
 
-# Okay, let's to the release
+# Okay, let's do the release
 
 mark_version "$version"
 
@@ -44,6 +44,7 @@ must make doc
 
 echo "Building dist..."
 must make dist
+echo "Building toolbox..."
 must make toolbox
 
 echo "Tagging release..."
