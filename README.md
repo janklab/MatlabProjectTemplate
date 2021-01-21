@@ -59,6 +59,8 @@ If you have a licensing scenario which is not covered by the above (and jeez, wh
 
 ## About MatlabProjectTemplate
 
-MatlabProjectTemplate was written by [Andrew Janke](https://apjanke.net). The project home page is <https://github.com/janklab/MatlabProjectTemplate>. You can get support, or even contribute to the project, there.
+MatlabProjectTemplate was written by [Andrew Janke](https://apjanke.net). The project home page is <https://matlabprojecttemplate.janklab.net> and you can find the repo at <https://github.com/janklab/MatlabProjectTemplate>. You can get support, or even contribute to the project, there. Bug reports, feature requests, and other feedback are welcome.
+
+View the [online documentation](https://matlabprojecttemplate.janklab.net).
 
 See the [FAQ](https://github.com/janklab/MatlabProjectTemplate/blob/main/MatlabProjectTemplate/doc/FAQ.md) or the stuff in the `MatlabProjectTemplate/doc` directory for more info.
