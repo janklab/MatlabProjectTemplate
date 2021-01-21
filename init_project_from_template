@@ -21,7 +21,7 @@ while [[ $# -gt 0 ]]; do
   shift
   case $arg in
     -d|--dev)
-      $DO_DEV=y
+      DO_DEV=y
       ;;
     *)
       echo >&2 "Error: unknown option: $arg"
