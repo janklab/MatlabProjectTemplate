@@ -13,7 +13,7 @@
 
 PROGRAM=myproject
 VERSION=$(shell cat VERSION)
-DIST=dist/${PROGRAM}-${VERSION}
+DIST="dist/${PROGRAM}-${VERSION}"
 DISTFILES=build/Mcode doc lib examples README.md LICENSE CHANGES.txt
 
 .PHONY: test
@@ -51,8 +51,8 @@ dist: build m-doc
 	rm -rf dist/*
 	mkdir -p ${DIST}
 	cp -R $(DISTFILES) $(DIST)
-	cd dist; tar czf ${PROGRAM}-${VERSION}.tgz --exclude='*.DS_Store' ${PROGRAM}-${VERSION}
-	cd dist; zip -rq ${PROGRAM}-${VERSION}.zip ${PROGRAM}-${VERSION} -x '*.DS_Store'
+	cd dist; tar czf "${PROGRAM}-${VERSION}.tgz" --exclude='*.DS_Store' "${PROGRAM}-${VERSION}"
+	cd dist; zip -rq "${PROGRAM}-${VERSION}.zip" "${PROGRAM}-${VERSION}" -x '*.DS_Store'
 
 .PHONY: java
 java:
