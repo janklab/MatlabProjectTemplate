@@ -21,7 +21,7 @@ elseif target == "m-doc"
   mypackage_make doc;
   make_mdoc;
 elseif target == "toolbox"
-  mypackage_make_doc;
+  mypackage_make doc;
   make_mdoc;
   mypackage_package_toolbox;
 elseif target == "clean"
