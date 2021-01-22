@@ -15,6 +15,8 @@ elseif target == "doc-src"
   make_package_docs --src
 elseif target == "doc"
   make_package_docs;
+elseif target == "doc-preview"
+  preview_docs;
 elseif target == "m-doc"
   mypackage_make doc;
   make_mdoc;
@@ -45,6 +47,12 @@ function make_mdoc
   if isfile('build/M-doc/feed.xml')
     delete('build/M-doc/feed.xml')
   end
+end
+
+function preview_docs
+import mypackage.internal.util.*;
+RAII.cd = withcd('docs');
+make_doc --preview
 end
 
 function make_dist
