@@ -1,7 +1,11 @@
 MatlabProjectTemplate Changelog
 ===============================
 
-Version 0.4.0 (in progress)
+Version 0.4.1 (in-progress)
+---------------------------
+
+
+Version 0.4.0 (2021-01-22)
 ---------------------------
 
 * Convert dev-kit and init_project_from_template to pure-Matlab implementations
