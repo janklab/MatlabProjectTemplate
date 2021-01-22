@@ -87,7 +87,7 @@ end
 function out = convertJavaDateToDatetime(j, zonePolicy)
 % TODO: Once this code has been validated, optimize it by converting it to
 % use toInstant() and toEpochSecond() on java.time datetime values.
-nanoScale = 1000000000000;
+nanoScale = 10^9;
 if isa(j, 'java.util.Date')
   out = datetime(j.getTime / 1000, 'ConvertFrom','posixtime');
   tzoff = j.getTimezoneOffset;
