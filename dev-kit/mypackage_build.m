@@ -1,4 +1,4 @@
-function build_project
+function mypackage_build
 % Build the project in preparation for distribution
 %
 % You do _not_ need to call this to get the project running from Mcode/. This is just

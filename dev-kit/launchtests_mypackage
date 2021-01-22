@@ -12,4 +12,4 @@ source "$mydir/locate_matlab.sh"
 
 echo "Running tests for mypackage under Matlab ($matlab)"
 
-"$matlab" -batch "addpath('$mydir'); addpath('$mydir/../Mcode'); launchtests_mypackage;"
+"$matlab" -batch "addpath('$mydir'); addpath('$mydir/../Mcode'); mypackage_launchtests;"

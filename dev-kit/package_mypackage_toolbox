@@ -15,4 +15,4 @@ case "$uname" in
     ;;
 esac
 
-"$MATLAB" -batch "addpath('dev-kit'); batch_package_mypackage_toolbox"
+"$MATLAB" -batch "addpath('dev-kit'); mypackage_batch_package_toolbox"

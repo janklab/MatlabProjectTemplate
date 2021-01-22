@@ -1,4 +1,4 @@
-function package_mypackage_toolbox
+function mypackage_package_toolbox
 % Packages this toolbox as a Matlab Toolbox .mltbx file
 %
 % package_mypackage_toolbox

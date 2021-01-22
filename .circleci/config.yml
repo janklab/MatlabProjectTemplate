@@ -15,7 +15,7 @@ jobs:
             pyenv global 3.7.0
       - matlab/install
       - matlab/run-command:
-          command: addpath dev-kit; launchtests_mypackage
+          command: addpath dev-kit; mypackage_launchtests
       - matlab/run-tests:
           test-results-junit: test-results/matlab/results.xml
           code-coverage-cobertura: coverage

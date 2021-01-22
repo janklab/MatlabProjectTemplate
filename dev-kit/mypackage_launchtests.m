@@ -1,4 +1,4 @@
-function launchtests
+function mypackage_launchtests
 % Entry point for running full test suite from command line or automation
 
 rootdir = fileparts(fileparts(mfilename('fullpath')));
