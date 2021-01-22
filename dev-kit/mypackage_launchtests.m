@@ -4,6 +4,6 @@ function mypackage_launchtests
 rootdir = fileparts(fileparts(mfilename('fullpath')));
 addpath(fullfile(rootdir, 'Mcode'))
 
-results = mypackage.test.runtests %#ok<NASGU>
+results = mypackage.test.runtests %#ok<NOPRT,NASGU>
 
 end
