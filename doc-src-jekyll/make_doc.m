@@ -23,6 +23,19 @@ import mypackage.internal.util.*
 
 RAII.cd = withcd(fileparts(mfilename('fullpath')));
 
+[status, output] = system('ruby --version'); %#ok<ASGLU>
+if status ~= 0
+  if ispc
+    installMsg = "Please install it from https://rubyinstaller.org/.";
+  elseif ismac
+    installMsg = "Please install it using Homebrew: `brew install ruby bundler`";
+  else
+    installMsg = "Please install it using your OS's package manager.";
+  end
+  error("It doesn't look like you have Ruby installed.\n%s\n%s", ...
+    "Ruby is required for building these docs.", installMsg);
+end
+
 system2('bundle install >/dev/null');
 
 if action == "preview"
