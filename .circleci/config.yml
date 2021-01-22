@@ -29,4 +29,6 @@ jobs:
       - run:
           command: make clean
       - run:
+          command: git reset --hard
+      - run:
           command: ./MatlabProjectTemplate/test_project_initialization
