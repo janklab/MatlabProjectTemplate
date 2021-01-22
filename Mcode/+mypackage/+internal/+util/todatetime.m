@@ -167,6 +167,11 @@ elseif isa(j, 'java.util.Collection')
       if isempty(zone)
         zone = dt.TimeZone;
         out.TimeZone = dt.TimeZone;
+      else
+        if ~isequal(dt.TimeZone, zone)
+          error(['Input Collection has inconsistent time zones on its ' ...
+            'elements; cannot convert to datetime']);
+        end
       end
       out(i) = dt;
     end
