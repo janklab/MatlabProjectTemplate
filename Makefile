@@ -27,12 +27,12 @@ build:
 # Build the programmatically-generated parts of the _source_ files for the doco
 .PHONY: docs
 docs:
-	./dev-kit/run_matlab "mypackage_make_doc --src"
+	./dev-kit/run_matlab "mypackage_make doc-src"
 
 # Build the actual output documents
 .PHONY: doc
 doc:
-	./dev-kit/run_matlab "mypackage_make_doc"
+	./dev-kit/run_matlab "mypackage_make doc"
 
 .PHONY: m-doc
 m-doc:

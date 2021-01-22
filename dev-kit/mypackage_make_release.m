@@ -53,7 +53,7 @@ echo("Running tests...")
 markVersion(newVersion);
 
 echo("Regenerating doco...");
-mypackage_make_doc
+mypackage_make doc
 
 echo("Building dist...")
 % TODO: Implement "make dist"

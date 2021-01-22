@@ -12,11 +12,11 @@ if target == "build"
 elseif target == "buildmex"
   mypackage_build_all_mex;
 elseif target == "doc-src"
-  mypackage_make_doc --src
+  make_package_docs --src
 elseif target == "doc"
-  mypackage_make_doc;
+  make_package_docs;
 elseif target == "m-doc"
-  mypackage_make_doc;
+  mypackage_make doc;
   make_mdoc;
 elseif target == "toolbox"
   mypackage_make_doc;
@@ -69,4 +69,32 @@ end
 
 function make_simplify
 rmrf(strsplit(".circleci .travis.yml azure-pipelines.yml src lib/java/MyCoolProject-java", " "));
+end
+
+function make_package_docs(varargin)
+doOnlySrc = ismember('--src', varargin);
+build_docs;
+if ~doOnlySrc
+  build_doc;
+end
+end
+
+function build_docs
+% Build the generated parts of the doc sources
+RAII.cd = withcd(reporoot); 
+docsDir = fullfile(reporoot, 'docs');
+% Copy over examples
+docsExsDir = fullfile(docsDir, 'examples');
+if isfolder(docsExsDir)
+  rmdir2(docsExsDir, 's');
+end
+copyfile('examples', fullfile('docs', 'examples'));
+% TODO: Generate API Reference
+end
+
+function build_doc
+% Build the final doc files
+RAII.cd = withcd(fullfile(reporoot, 'docs'));
+make_doc;
+delete('../doc/make_doc*');
 end
