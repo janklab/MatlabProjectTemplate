@@ -2,13 +2,13 @@
 
 [![Travis Build Status](https://travis-ci.com/janklab/MatlabProjectTemplate.svg?branch=main)](https://travis-ci.com/github/janklab/MatlabProjectTemplate)  [![CircleCI Build Status](https://circleci.com/gh/janklab/MatlabProjectTemplate.svg?style=shield)](https://circleci.com/gh/janklab/MatlabProjectTemplate) [![Azure Build Status](https://dev.azure.com/janklab/MatlabProjectTemplate/_apis/build/status/janklab.MatlabProjectTemplate?branchName=main)](https://dev.azure.com/janklab/MatlabProjectTemplate/_build/latest?definitionId=1&branchName=main) [![View MatlabProjectTemplate on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/85840-matlabprojecttemplate)
 
-This is a template repo for creating Matlab library and application projects. It defines a "standard" project structure that should be suitable for many projects, including those intended for redistribution / open source.
+MatlabProjectTemplate ("MPT") is a template repo for creating Matlab library and application projects. It defines a "standard" project structure that should be suitable for many projects, including those intended for redistribution / open source.
 
 It is suitable for both libraries and applications, and includes coding and organizational conventions that make it safe to use this project's code in a Matlab environment that uses code from other projects, too.
 
 ## Features
 
-MatlabProjectTemplate supports the following features. You don't _have_ to use any of them; you can just ignore the ones you don't care about. But they're there if you need them!
+MatlabProjectTemplate supports the following features. You don't _have_ to use any of them; you can just ignore the ones you don't care about. But they're there if you need them! MPT's philosophy is "support but do not require".
 
 * Collaboration between multiple developers
 * Building [Matlab Toolboxes](https://www.mathworks.com/help/matlab/matlab_prog/create-and-share-custom-matlab-toolboxes.html)
@@ -22,7 +22,9 @@ MatlabProjectTemplate supports the following features. You don't _have_ to use a
 
 ## Requirements
 
-Some features, including project initialization, only work on Mac and Linux. But don't worry! If you're on Windows, just install [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and use that.
+Just Matlab, for most things.
+
+Building custom Java code requires Mac or Linux plus a Java JDK and Apache Maven. If you're a Java developer, you know how to set theseup.
 
 ## Usage
 
@@ -33,8 +35,8 @@ NOTE: Don't "fork" or "clone" the MatlabProjectTemplate repo. That will leave yo
 Then:
 
 * Add a license file!
-* Edit the variables `project_settings.sh`.
-* Run `init_project_from_template`.
+* Edit the variables `project_settings.m`.
+* Open Matlab and run `init_project_from_template.m`.
 * Edit `.editorconfig` to reflect your preferred code style.
 * Edit `<myproject>.prj.in` and put in all your contact and descriptive info and other stuff.
 

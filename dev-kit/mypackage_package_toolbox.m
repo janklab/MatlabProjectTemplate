@@ -1,7 +1,7 @@
 function mypackage_package_toolbox
 % Packages this toolbox as a Matlab Toolbox .mltbx file
 %
-% package_mypackage_toolbox
+% mypackage_package_toolbox
 %
 % The package must be loaded on to the Matlab path in order for this to work.
 
@@ -13,9 +13,10 @@ if ~isfolder('dist')
 end
 
 % Munge the project file
-% Toolboxes don't support "-<pre>" suffixes in versions
+% Toolboxes don't support "-<pre>" or "+" suffixes in versions
 tbxVer = tbxInfo.version;
-baseTbxVer = regexprep(tbxVer, '-.*', '');
+baseTbxVer = strrep(regexprep(tbxVer, '-.*', ''), '+', '');
+fprintf('Packaging %s %s (as %s)\n', tbxName, tbxVer, baseTbxVer);
 
 prjInFile = sprintf('%s.prj.in', tbxName);
 prjFile = sprintf('%s.prj', tbxName);
@@ -35,7 +36,7 @@ matlab.addons.toolbox.packageToolbox(prjFile);
 movefile(builtFile, targetFile);
 delete(prjFile);
 
-fprintf('%s packaged to %s\n', tbxName, targetFile);
+fprintf('%s %s packaged to %s (as %s)\n', tbxName, tbxVer, targetFile, baseTbxVer);
 
 end
 

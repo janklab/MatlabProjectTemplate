@@ -28,7 +28,7 @@ classdef globals
       persistent val
       if isempty(val)
         versionFile = fullfile(mypackage.globals.distroot, 'VERSION');
-        val = strtrim(mypackage.internal.readtext(versionFile));
+        val = strtrim(mypackage.internal.util.readtext(versionFile));
       end
       out = val;
     end

@@ -1,6 +1,11 @@
 # This Makefile lets you build the project and its documentation, run tests,
 # package it for distribution, and so on.
 #
+# This is mostly provided just as a convenience for developers who like using 'make'.
+# All the actual build logic is in the dev-kit/*.m files, which can be run
+# directly, without using 'make'. The exception is 'make java', which must be
+# run without Matlab running, because Matlab locks the JAR files it has loaded.
+#
 # Targets provided:
 #
 #   make doc - Build the project documentation into doc/
@@ -11,79 +16,50 @@
 #   make doc-src - Build derived Markdown files in docs/
 #   make clean - Remove derived files
 
-PROGRAM=MyCoolProject
-VERSION="$(shell cat VERSION)"
-DIST="dist/${PROGRAM}-${VERSION}"
-DISTFILES=build/Mcode doc lib examples README.md LICENSE CHANGES.txt
-
 .PHONY: test
 test:
-	./dev-kit/launchtests_mypackage
+	./dev-kit/run_matlab "mypackage_make test"
 
 .PHONY: build
 build:
-	./dev-kit/build_mypackage
+	./dev-kit/run_matlab "mypackage_make build"
 
 # Build the programmatically-generated parts of the _source_ files for the doco
 .PHONY: docs
 docs:
-	rm -rf docs/examples
-	cp -R examples docs
+	./dev-kit/run_matlab "mypackage_make_doc --src"
 
 # Build the actual output documents
 .PHONY: doc
-doc: docs
-	cd docs && ./make_doc
+doc:
+	./dev-kit/run_matlab "mypackage_make_doc"
 
 .PHONY: m-doc
-m-doc: doc
-	rm -rf build/M-doc
-	mkdir -p build/M-doc
-	cp -R doc/* build/M-doc
-	rm -f build/M-doc/feed.xml
+m-doc:
+	./dev-kit/run_matlab "mypackage_make m-doc"
 
 .PHONY: toolbox
 toolbox: m-doc
-	bash ./dev-kit/package_mypackage_toolbox
+	./dev-kit/run_matlab "mypackage_make toolbox"
 
 .PHONY: dist
-dist: build m-doc
-	rm -rf dist/*
-	mkdir -p ${DIST}
-	cp -R $(DISTFILES) $(DIST)
-	cd dist; tar czf "${PROGRAM}-${VERSION}.tgz" --exclude='*.DS_Store' "${PROGRAM}-${VERSION}"
-	cd dist; zip -rq "${PROGRAM}-${VERSION}.zip" "${PROGRAM}-${VERSION}" -x '*.DS_Store'
+dist:
+	./dev-kit/run_matlab "mypackage_make dist"
 
+# TODO: Port this to M-code. This is hard because the .jar cannot be copied in to place
+# in lib while Matlab is running, because it locks loaded .jar files (at least on Windows).
 .PHONY: java
 java:
-	cd src/java/myproject-java; mvn package
-	mkdir -p lib/java/myproject-java
-	cp src/java/myproject-java/target/*.jar lib/java/myproject-java
+	cd src/java/MyCoolProject-java; mvn package
+	mkdir -p lib/java/MyCoolProject-java
+	cp src/java/MyCoolProject-java/target/*.jar lib/java/MyCoolProject-java
 
 .PHONY: clean
 clean:
-	rm -rf dist/* build docs/site docs/_site M-doc test-output
+	./dev-kit/run_matlab "mypackage_make clean"
 
 # Run this _after_ initialization if you want to throw away some nonessential
 # features to make your repo layout simpler.
 .PHONY: simplify
 simplify:
-	rm -rf .circleci .travis.yml azure-pipelines.yml src lib/java/MyCoolProject-java
-
-# start-template-internal
-
-# These targets is for MatlabProjectTemplate's internal use. Don't call them yourself.
-# You can and should just delete this section after your project is initialized.
-# (I can't do that for you because I actually need these targets *after* project
-# initialization for work on MatlabProjectTemplate.)
-
-.PHONY: rollback-init
-rollback-init:
-	git reset --hard
-	rm -rf M-doc Mcode/+mycoolpackage docs/* doc/* \
-	    src/java/MyCoolProject-java \
-			dev-kit/*mycoolpackage* dev-kit/*MyCoolProject* MyCoolProject.mltbx MyCoolProject.prj.in \
-			mycoolpackage* lib/java/MyCoolProject-java
-	git reset --hard
-
-# end-template-internal
+	./dev-kit/run_matlab "mypackage_make simplify"

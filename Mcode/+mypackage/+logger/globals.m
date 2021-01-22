@@ -15,7 +15,7 @@ classdef globals
       persistent val
       if isempty(val)
         versionFile = fullfile(logger.globals.distroot, 'VERSION');
-        val = strtrim(logger.internal.readtext(versionFile));
+        val = strtrim(logger.internal.util.readtext(versionFile));
       end
       out = val;
     end

@@ -1,0 +1,46 @@
+title: myproject Documentation
+email: __myproject_email__
+description: __myproject_summary__
+
+baseurl: "/"
+url: ""
+
+theme: jekyll-theme-cayman
+
+github_username: __myghuser__
+
+# Locked-down GitHub Pages configuration
+markdown: kramdown
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+exclude:
+  - Gemfile*
+
+keep_files:
+  - images
+
+plugins:
+  # Forced by GitHub Pages:
+  - jekyll-asciidoc
+  - jekyll-coffeescript
+  - jekyll-default-layout
+  - jekyll-gist
+  - jekyll-github-metadata
+  - jekyll-last-modified-at
+  - jekyll-optional-front-matter
+  - jekyll-paginate
+  - jekyll-readme-index
+  - jekyll-relative-links
+  - jekyll-titles-from-headings
+  # Supported by GitHub Pages, but optional:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap

@@ -12,7 +12,7 @@ cd(reporoot)
 fprintf('Building myproject...\n')
 
 cfgFile = fullfile(reporoot, '.mlproject.json');
-config = jsondecode(mypackage.internal.readtext(cfgFile));
+config = jsondecode(mypackage.internal.util.readtext(cfgFile));
 
 buildMcodeDir = fullfile('build', 'Mcode');
 if isfolder(buildMcodeDir)
