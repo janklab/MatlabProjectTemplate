@@ -6,6 +6,9 @@ function mypackage_make(target, varargin)
 arguments
   target (1,1) string
 end
+arguments (Repeating)
+  varargin
+end
 
 if target == "build"
   mypackage_build;
@@ -43,12 +46,12 @@ end
 end
 
 function make_mdoc
-  rmrf('build/M-doc')
-  mkdir2('build/M-doc')
-  copyfile2('doc/*', 'build/M-doc')
-  if isfile('build/M-doc/feed.xml')
-    delete('build/M-doc/feed.xml')
-  end
+rmrf('build/M-doc')
+mkdir2('build/M-doc')
+copyfile2('doc/*', 'build/M-doc')
+if isfile('build/M-doc/feed.xml')
+  delete('build/M-doc/feed.xml')
+end
 end
 
 function preview_docs
@@ -58,19 +61,19 @@ make_doc --preview
 end
 
 function make_dist
-  program = "myproject";
-  distName = program + "-" + mypackage.globals.version;
-  verDistDir = fullfile("dist", distName);
-  distfiles = ["build/Mcode" "doc" "lib" "examples" "README.md" "LICENSE" "CHANGES.txt"];
-  rmrf([verDistDir, distName+".tar.gz", distName+".zip"])
-  if ~isfolder('dist')
-    mkdir2('dist')
-  end
-  mkdir2(verDistDir)
-  copyfile2(distfiles, verDistDir)
-  RAII.cd = withcd('dist');
-  tar(distName+".tar.gz", distName)
-  zip(distName+".zip", distName)
+program = "myproject";
+distName = program + "-" + mypackage.globals.version;
+verDistDir = fullfile("dist", distName);
+distfiles = ["build/Mcode" "doc" "lib" "examples" "README.md" "LICENSE" "CHANGES.txt"];
+rmrf([verDistDir, distName+".tar.gz", distName+".zip"])
+if ~isfolder('dist')
+  mkdir2('dist')
+end
+mkdir2(verDistDir)
+copyfile2(distfiles, verDistDir)
+RAII.cd = withcd('dist');
+tar(distName+".tar.gz", distName)
+zip(distName+".zip", distName)
 end
 
 function make_clean
@@ -91,7 +94,7 @@ end
 
 function build_docs
 % Build the generated parts of the doc sources
-RAII.cd = withcd(reporoot); 
+RAII.cd = withcd(reporoot);
 docsDir = fullfile(reporoot, 'docs');
 % Copy over examples
 docsExsDir = fullfile(docsDir, 'examples');
