@@ -18,7 +18,7 @@ function mustBeA(value, type)
 %
 % Note: The cellstr pseudotype is nontrivial to check for, as it
 % must call iscellstr() and check all cell contents. Avoid calling it in
-% perforamce-critical code.
+% performance-critical code.
 
 % Avoid infinite recursion
 assert(ischar(type), 'type must be a char, but got a %s', class(type));

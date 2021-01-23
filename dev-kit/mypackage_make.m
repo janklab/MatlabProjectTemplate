@@ -1,4 +1,4 @@
-function mypackage_make(target)
+function mypackage_make(target, varargin)
 % Build tool for mypackage
 
 %#ok<*STRNU>
@@ -33,6 +33,9 @@ elseif target == "dist"
   make_dist
 elseif target == "simplify"
   make_simplify
+elseif target == "util-shim"
+  pkg = varargin{1};
+  make_util_shim(pkg);
 else
   error("Undefined target: %s", target);
 end
@@ -104,4 +107,19 @@ function build_doc
 RAII.cd = withcd(fullfile(reporoot, 'docs'));
 make_doc;
 delete('../doc/make_doc*');
+end
+
+function make_util_shim(pkg)
+shimsDir = fullfile(reporoot, 'dev-kit', 'util-shims');
+relpkgpath = strjoin(strcat("+", strsplit(pkg, ".")));
+pkgdir = fullfile(fullfile(reporoot, 'Mcode'), relpkgpath);
+if ~isfolder
+  error('Package folder does not exist: %s', pkgdir);
+end
+privateDir = fullfile(pkgdir, 'private');
+if ~isfolder(privateDir)
+  mkdir(privateDir);
+end
+copyfile2(fullfile(shimsDir, '*.m'), privateDir);
+fprintf('Util-shimmed package %s', pkg);
 end
