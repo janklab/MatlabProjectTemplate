@@ -8,6 +8,7 @@ Version 0.4.1 (2021-01-24)
 * Better error messages when Ruby is not installed and you need it
 * Add `make doc-preview` target
 * Fix initialization of project `README.md` file
+* Fix some bugs in `make release` target
 
 Version 0.4.0 (2021-01-22)
 ---------------------------

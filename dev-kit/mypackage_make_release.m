@@ -60,7 +60,7 @@ mypackage_make doc
 echo("Building dist...")
 % TODO: Implement "make dist"
 echo("Building toolbox...")
-mypackageage_package_toolbox
+mypackage_package_toolbox
 
 echo("Tagging release...")
 system2(sprintf('git commit -a -m "Version %s"', newVersion));
