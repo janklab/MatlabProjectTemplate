@@ -64,7 +64,7 @@ function make_dist
 program = "myproject";
 distName = program + "-" + mypackage.globals.version;
 verDistDir = fullfile("dist", distName);
-distfiles = ["build/Mcode" "doc" "lib" "examples" "README.md" "LICENSE" "CHANGES.txt"];
+distfiles = ["build/Mcode" "doc" "lib" "examples" "README.md" "LICENSE" "CHANGES.md"];
 rmrf([verDistDir, distName+".tar.gz", distName+".zip"])
 if ~isfolder('dist')
   mkdir2('dist')
