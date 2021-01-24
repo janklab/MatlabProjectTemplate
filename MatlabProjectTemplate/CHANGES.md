@@ -6,6 +6,7 @@ Version 0.4.2 (in-progress)
 
 * Clean up `VERSION` formatting
 * Use `CHANGES.md` instead of `CHANGES.txt` (works better with GitHub Releases)
+* Fix busted naming in `make java` target
 
 Version 0.4.1 (2021-01-24)
 ---------------------------
