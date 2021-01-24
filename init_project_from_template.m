@@ -120,6 +120,7 @@ replacements = {
   "Mypackage" PACKAGE_CAP
   "R2019b" PROJECT_MATLAB_VERSION
   "command: ./MatlabProjectTemplate/test_project_initialization" "command: echo Hello world"
+  "./MatlabProjectTemplate/test_project_initialization" "echo Hello world"
   "" ""
   };
 for file = filesToMunge
