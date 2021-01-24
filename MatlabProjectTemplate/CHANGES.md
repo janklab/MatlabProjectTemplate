@@ -1,6 +1,11 @@
 MatlabProjectTemplate Changelog
 ===============================
 
+Version 0.4.2 (in-progress)
+---------------------------
+
+* Clean up `VERSION` formatting
+
 Version 0.4.1 (2021-01-24)
 ---------------------------
 

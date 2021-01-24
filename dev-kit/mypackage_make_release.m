@@ -80,7 +80,7 @@ end
 end
 
 function markVersion(version)
-writetext(version, 'VERSION');
+writetext(sprintf('%s\n'), version), 'VERSION');
 end
 
 function echo(fmt, varargin)
