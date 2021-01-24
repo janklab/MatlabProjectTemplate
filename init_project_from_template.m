@@ -125,6 +125,7 @@ replacements = {
 for file = filesToMunge
   mungefile(file, replacements);
 end
+copyfile2('MatlabProjectTemplate/project-README.md', 'README.md')
 
 for f = fileglob2abspath({'*mypackage*', 'dev-kit/*mypackage*'})
   relFile = strrep(f, reporoot+filesep, '');

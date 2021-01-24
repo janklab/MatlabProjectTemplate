@@ -1,12 +1,13 @@
 MatlabProjectTemplate Changelog
 ===============================
 
-Version 0.4.1 (in-progress)
+Version 0.4.1 (2021-01-24)
 ---------------------------
 
 * Add util functions: todatetime, mustBeA, size2str
 * Better error messages when Ruby is not installed and you need it
 * Add `make doc-preview` target
+* Fix initialization of project `README.md` file
 
 Version 0.4.0 (2021-01-22)
 ---------------------------
