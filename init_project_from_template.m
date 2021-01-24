@@ -119,13 +119,13 @@ replacements = {
   "myghuser" GHUSER
   "Mypackage" PACKAGE_CAP
   "R2019b" PROJECT_MATLAB_VERSION
-  "command: ./MatlabProjectTemplate/test_project_initialization" "command: echo Hello world"
-  "./MatlabProjectTemplate/test_project_initialization" "echo Hello world"
-  "" ""
   };
-for file = filesToMunge
-  mungefile(file, replacements);
-end
+mungefiles(filesToMunge, replacements);
+replacements= {
+  "# start_MPT_targets.*# end_MPT_targets" ""
+};
+ciConfigFiles = [".travis.yml", ".circleci/config.yml", "azure-pipelines.yml"];
+mungefiles(ciConfigFiles, replacements, "regex");
 copyfile2('MatlabProjectTemplate/project-README.md', 'README.md')
 
 for f = fileglob2abspath({'*mypackage*', 'dev-kit/*mypackage*'})
@@ -160,25 +160,27 @@ echo
 
 end
 
-function mungefile(file, replacements, replacementType)
+function mungefiles(files, replacements, replacementType)
 arguments
-  file (1,1) string
+  files (1,:) string
   replacements cell
   replacementType (1,1) string = "string"
 end
-origTxt = readtext(file);
-txt = origTxt;
-for i = 1:size(replacements, 1)
-  [old, new] = replacements{i,:};
-  if replacementType == "string"
-    txt = strrep(txt, old, new);
-  elseif replacementType == "regex"
-    txt = regexprep(txt, old, new);
-  else
-    error('Invalid replacementType: %s', replacementType);
+for file = files
+  origTxt = readtext(file);
+  txt = origTxt;
+  for i = 1:size(replacements, 1)
+    [old, new] = replacements{i,:};
+    if replacementType == "string"
+      txt = strrep(txt, old, new);
+    elseif replacementType == "regex"
+      txt = regexprep(txt, old, new);
+    else
+      error('Invalid replacementType: %s', replacementType);
+    end
   end
+  writetext(txt, file);
 end
-writetext(txt, file);
 end
 
 function out = fileglob2abspath(pats)

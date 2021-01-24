@@ -28,7 +28,9 @@ jobs:
           command: make dist
       - run:
           command: make clean
+      # start_MPT_targets
       - run:
           command: git reset --hard
       - run:
           command: ./MatlabProjectTemplate/test_project_initialization
+      # end_MPT_targets

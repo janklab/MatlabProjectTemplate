@@ -8,8 +8,10 @@ script:
   - make dist
   - make toolbox
   - make clean
+  # start_MPT_targets
   # make dist does make doc, which alters the contents of doc/. Reset to revert.
   - git reset --hard
   - ./MatlabProjectTemplate/test_project_initialization
+  # end_MPT_targets
 # Remove this if you don't use codecov.io
 after_script: bash <(curl -s https://codecov.io/bash)
