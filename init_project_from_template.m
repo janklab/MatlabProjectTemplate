@@ -121,12 +121,14 @@ replacements = {
   "R2019b" PROJECT_MATLAB_VERSION
   };
 mungefiles(filesToMunge, replacements);
-replacements= {
-  "# start_MPT_targets.*# end_MPT_targets" ""
-};
-ciConfigFiles = [".travis.yml", ".circleci/config.yml", "azure-pipelines.yml"];
-mungefiles(ciConfigFiles, replacements, "regex");
 copyfile2('MatlabProjectTemplate/project-README.md', 'README.md')
+if ~doDev
+  replacements= {
+    "# start_MPT_targets.*# end_MPT_targets" ""
+  };
+  ciConfigFiles = [".travis.yml", ".circleci/config.yml", "azure-pipelines.yml"];
+  mungefiles(ciConfigFiles, replacements, "regex");
+end
 
 for f = fileglob2abspath({'*mypackage*', 'dev-kit/*mypackage*'})
   relFile = strrep(f, reporoot+filesep, '');
