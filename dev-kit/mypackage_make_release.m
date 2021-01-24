@@ -20,7 +20,9 @@ arguments
 end
 
 % Enforce SemVer version formatting
-validVersionPat = '^[1-9][0-9]*\.[1-9][0-9]*\.[1-9][0-9]*[+a-zA-Z-]*$';
+% TODO: Fix this to prohibit leading zeros, but still allow "0" as a version
+% number component.
+validVersionPat = '^[0-9]+\.[0-9]+\.[0-9]+[+a-zA-Z-]*$';
 if isempty(regexp(newVersion, validVersionPat, 'once'))
   error('Invalid version number: "%s". Please use a valid SemVer version number.', newVersion);
 end
