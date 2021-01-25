@@ -160,6 +160,9 @@ echo
 echo("Happy hacking!")
 echo
 
+% This message will self-destruct in 5 seconds. 5... 4... 3... 2... 1...
+delete([mfilename('fullpath') '.m'])
+
 end
 
 function mungefiles(files, replacements, replacementType)
