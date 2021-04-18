@@ -1,5 +1,18 @@
 function mypackage_make(target, varargin)
 % Build tool for mypackage
+%
+% This is the main build tool for doing all the build and packaging operations
+% for mypackage. It's intended to be called as a command. This is what you will
+% use to build & package the distribution files for a release of the package.
+%
+% Operations:
+%   mypackage_make test         - run the tests
+%   mypackage_make dist         - build the distribution files
+%   mypackage_make toolbox      - build the Matlab Toolbox .mltbx installer file
+%   mypackage_make clean        - delete all the derived artifacts
+%   mypackage_make doc          - build the project doco
+%   mypackage_make doc-preview  - live-preview the project doco
+%   mypackage_make build        - "build" the source code
 
 %#ok<*STRNU>
 
