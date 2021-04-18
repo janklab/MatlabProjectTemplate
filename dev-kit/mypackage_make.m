@@ -114,9 +114,9 @@ end
 
 function make_util_shim(pkg)
 shimsDir = fullfile(reporoot, 'dev-kit', 'util-shims');
-relpkgpath = strjoin(strcat("+", strsplit(pkg, ".")));
+relpkgpath = strjoin(strcat("+", strsplit(pkg, ".")), "/");
 pkgdir = fullfile(fullfile(reporoot, 'Mcode'), relpkgpath);
-if ~isfolder
+if ~isfolder(pkgdir)
   error('Package folder does not exist: %s', pkgdir);
 end
 privateDir = fullfile(pkgdir, 'private');
@@ -124,5 +124,5 @@ if ~isfolder(privateDir)
   mkdir(privateDir);
 end
 copyfile2(fullfile(shimsDir, '*.m'), privateDir);
-fprintf('Util-shimmed package %s', pkg);
+fprintf('Util-shimmed package: %s', pkg);
 end
