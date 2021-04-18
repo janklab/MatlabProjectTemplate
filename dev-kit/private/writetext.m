@@ -11,5 +11,10 @@ arguments
   file (1,1) string
   encoding (1,1) string = 'UTF-8'
 end
-mypackage.internal.util.writetext(text, file, encoding);
+[fid,msg] = fopen(file, 'w', 'n', encoding);
+if fid < 1
+  error('Failed opening file %s: %s', file, msg);
+end
+RAII.fh = onCleanup(@() fclose(fid));
+fprintf(fid, '%s', text);
 end
