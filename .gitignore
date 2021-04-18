@@ -27,6 +27,7 @@ M-doc/
 # VS Code stuff
 .project
 .settings
+.vscode
 
 # Doc site server droppings
 _site
