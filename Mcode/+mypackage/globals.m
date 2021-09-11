@@ -13,7 +13,7 @@ classdef globals
   %    s.someSetting = 42;
   
   properties (Constant)
-    % Path to the root directory of this __myproject__ distribution
+    % Path to the root directory of this __myproject__ distribution.
     distroot = string(fileparts(fileparts(fileparts(mfilename('fullpath')))));
     % Global settings for mypackage.
     settings = mypackage.Settings.discover
