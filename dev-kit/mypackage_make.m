@@ -102,10 +102,10 @@ if ~isfolder('dist')
   mkdir2('dist')
 end
 mkdir2(verDistDir)
-% This doesn't work - it copies the *contents* of the dir, not the dir itself
-%copyfile2(distfiles, verDistDir)
 for distFile = distfiles
-  system2(sprintf("cp -R '%s' '%s'", distFile, verDistDir));
+  if isfile(distFile) || isfolder(distFile)
+    system2(sprintf("cp -R '%s' '%s'", distFile, verDistDir));
+  end
 end
 RAII.cd = withcd('dist');
 tar(distName+".tar.gz", distName)
@@ -113,7 +113,7 @@ zip(distName+".zip", distName)
 end
 
 function make_clean
-rmrf(strsplit("dist/* build docs/site docs/_site M-doc test-output", " "));
+rmrf(strsplit("dist/* build docs/site docs/_site test-output", " "));
 end
 
 function make_simplify

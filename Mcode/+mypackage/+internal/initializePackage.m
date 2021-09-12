@@ -12,43 +12,46 @@ if mypackage.internal.utils.getpackageappdata('initialized')
 end
 
 % Don't depend on globals, to avoid circular dependency
-%distroot = mypackage.globals.distroot;
+% distroot = mypackage.globals.distroot;
 distroot = string(fileparts(fileparts(fileparts(fileparts(mfilename('fullpath'))))));
 
 % Java dependencies
 libJava = fullfile(distroot, 'lib', 'java');
-javaLibs = readdir(libJava);
-for jlib = javaLibs
-  jlibdir = fullfile(libJava, jlib);
-  d = dir(fullfile(jlibdir, '*.jar'));
-  for jar = {d.name}
-    javaaddpath(fullfile(jlibdir, jar));
+if isfolder(libJava)
+  javaLibs = readdir(libJava);
+  for jlib = javaLibs
+    jlibdir = fullfile(libJava, jlib);
+    d = dir(fullfile(jlibdir, '*.jar'));
+    for jar = {d.name}
+      javaaddpath(fullfile(jlibdir, jar));
+    end
   end
 end
 
 % Matlab library dependencies
 libMatlab = fullfile(distroot, 'lib', 'matlab');
-mLibs = readdir(libMatlab);
-for mlib = mLibs
-  mlibdir = fullfile(libMatlab, mlib);
-  % There's no standard layout for a Matlab project, so we use heuristics to guess
-  % where they keep their source files
-  candidateSubdirs = ["Mcode" "mcode" "src" "srcfiles"];
-  for sub = candidateSubdirs
-    if isfolder(fullfile(mlibdir, sub))
-      addpath(fullfile(mlibdir, sub))
+if isfolder(libMatlab)
+  mLibs = readdir(libMatlab);
+  for mlib = mLibs
+    mlibdir = fullfile(libMatlab, mlib);
+    % There's no standard layout for a Matlab project, so we use heuristics to guess
+    % where they keep their source files
+    candidateSubdirs = ["Mcode" "mcode" "src" "srcfiles"];
+    for sub = candidateSubdirs
+      if isfolder(fullfile(mlibdir, sub))
+        addpath(fullfile(mlibdir, sub))
+      end
     end
+    d = dir(fullfile(mlibdir, '*.m'));
+    if ~isempty(d)
+      addpath(mlibdir);
+    end
+    % TODO: Maybe we should just look at all top-level dirs that aren't `+` package dirs,
+    % and add them all if they contain any M-files?
   end
-  d = dir(fullfile(mlibdir, '*.m'));
-  if ~isempty(d)
-    addpath(mlibdir);
-  end
-  % TODO: Maybe we should just look at all top-level dirs that aren't `+` package dirs,
-  % and add them all if they contain any M-files?
 end
 
-
-% Put any custom library initialization code here
+% Put any other custom library initialization code here
 
 % Mark library as initialized
 
