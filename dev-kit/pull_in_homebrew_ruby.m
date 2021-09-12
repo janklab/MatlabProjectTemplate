@@ -45,11 +45,21 @@ if isempty(found)
   return
 end
 
-pth = strsplit(getenv('PATH'), ':');
-rubyVer = '3.0.0'; % HACK. TODO: Detect dynamically.
-needBinDirs = [cand+"/bin", cand+"/opt/ruby/bin", cand+"/lib/ruby/gems/"+rubyVer+"/bin"];
+p = strsplit(getenv('PATH'), ':');
+needBinDirs = [brewPrefix+"/bin", brewPrefix+"/opt/ruby/bin"];
+rubyGemsVer = []; %#ok<NASGU>
+for minorVer = 5:-1:0
+    for patchVer = 10:-1:0
+        maybeRubyVer = sprintf("3.%d.%d", minorVer, patchVer);
+        if isfolder(brewPrefix+"/lib/ruby/gems/"+maybeRubyVer+"/bin")
+            rubyGemsVer = maybeRubyVer;
+            needBinDirs(end+1) = brewPrefix+"/lib/ruby/gems/"+rubyGemsVer+"/bin"; %#ok<AGROW>
+            break
+        end
+    end
+end
 for binDir = needBinDirs
-  if ~ismember(binDir, pth)
+  if ~ismember(binDir, p)
     setenv('PATH', binDir+":"+getenv('PATH'));
   end
 end
