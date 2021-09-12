@@ -58,7 +58,7 @@ echo("Regenerating doco...");
 mypackage_make doc
 
 echo("Building dist...")
-% TODO: Implement "make dist"
+mypackage_make dist
 echo("Building toolbox...")
 mypackage_package_toolbox
 
