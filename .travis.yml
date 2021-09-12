@@ -1,7 +1,6 @@
 language: matlab
 matlab:
-  - R2020a
-  - R2020b
+  - R2021a
 script:
   - matlab -batch "addpath dev-kit; mypackage_launchtests"
   - make test
