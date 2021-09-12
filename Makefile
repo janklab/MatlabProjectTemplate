@@ -8,8 +8,8 @@
 #
 # Targets provided:
 #
-#   make docs     - Build the Markdown-stage doco in docs/
-#   make doc      - Build the final static doco into doc/
+#   make docs     - Build the Markdown-stage doco in docs/ (from docs-src/)
+#   make doc      - Build the final static doco into doc/ (from docs/)
 #
 #   make test     - Run the project Matlab unit tests
 #
@@ -17,7 +17,6 @@
 #   make toolbox  - Build the project distribution Matlab Toolbox .mltbx file
 #   make zips     - Build the project distribution zip files
 #
-#   make doc-src  - Build derived Markdown files in docs/
 #   make clean    - Remove derived files
 #
 #   make java     - Build the project's custom Java code

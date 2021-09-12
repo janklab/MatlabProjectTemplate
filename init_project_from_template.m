@@ -65,7 +65,7 @@ end
 
 copyStructFieldsIntoWorkspace(info);
 
-docSiteDir = "doc-src-" + DOCTOOL;
+docSiteDir = "docs-src-" + DOCTOOL;
 if ~isfolder(docSiteDir)
   error(['Invalid choice for DOCTOOL: %s\nValid choices are: ' ...
     'jekyll, mkdocs, gh-pages, gh-pages-raw'], DOCTOOL);
@@ -144,8 +144,8 @@ if ~doDev
 end
 
 rmdir2('docs', 's');
-copyfile2("doc-src-"+DOCTOOL, 'docs');
-for f = ["doc-src-jekyll" "doc-src-gh-pages" "doc-src-gh-pages-raw" "doc-src-mkdocs"]
+copyfile2("docs-src-"+DOCTOOL, 'docs');
+for f = ["docs-src-jekyll" "docs-src-gh-pages" "docs-src-gh-pages-raw" "docs-src-mkdocs"]
   rmdir2(f, 's');
 end
 

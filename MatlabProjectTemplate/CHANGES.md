@@ -8,6 +8,7 @@ Version 0.5.0 (in progress)
 * Gracefully handle case where dirs like `lib/` are removed.
 * Update Travis CI config for new Matlab version, and reduce covered versions to conserved Travis credits (now that Travis doesn't have unlimited free plans).
 * Rename internal.utils class to internal.misc, to avoid confusion with the internal.util package, and make tab completion work better.
+* Rename doc-src/ to docs-src/, since it is the source for docs/, not doc/. (docs/ is the source for doc/.)
 
 Version 0.4.2 (2021-09-11)
 ---------------------------

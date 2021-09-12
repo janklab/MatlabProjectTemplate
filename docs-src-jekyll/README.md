@@ -1,4 +1,4 @@
-# doc-src
+# docs-src
 
 This directory contains stuff for generating the project documentation using Jekyll, a static site generator that uses Markdown.
 
