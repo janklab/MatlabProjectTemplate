@@ -77,13 +77,18 @@ function make_dist
 program = "myproject";
 distName = program + "-" + mypackage.globals.version;
 verDistDir = fullfile("dist", distName);
-distfiles = ["build/Mcode" "doc" "lib" "examples" "README.md" "LICENSE" "CHANGES.md"];
+distfiles = ["build/Mcode" "doc" "lib" "examples" "README.md" "LICENSE" ...
+  "CHANGES.md" "VERSION"];
 rmrf([verDistDir, distName+".tar.gz", distName+".zip"])
 if ~isfolder('dist')
   mkdir2('dist')
 end
 mkdir2(verDistDir)
-copyfile2(distfiles, verDistDir)
+% This doesn't work - it copies the *contents* of the dir, not the dir itself
+%copyfile2(distfiles, verDistDir)
+for distFile = distfiles
+  system2(sprintf("cp -R '%s' '%s'", distFile, verDistDir));
+end
 RAII.cd = withcd('dist');
 tar(distName+".tar.gz", distName)
 zip(distName+".zip", distName)
