@@ -8,7 +8,11 @@ source 'https://rubygems.org'
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem 'jekyll' #, '~> 3.8.5'
+
+# Use the specific jekyll version that GitHub Pages is currently on.
+# This is both for consistency and to prevent Bundler from getting stuck in
+# a degenerate dependency resolution search that takes forever.
+gem 'jekyll', '~> 3.9.0'
 
 gem 'minima' #, '~> 2.0'
 gem 'kramdown-parser-gfm'
