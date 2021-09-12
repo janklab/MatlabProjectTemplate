@@ -2,10 +2,8 @@ language: matlab
 matlab:
   - R2021a
 script:
-  - matlab -batch "addpath dev-kit; mypackage_launchtests"
   - make test
   - make dist
-  - make toolbox
   - make clean
   # start_MPT_targets
   # make dist does make doc, which alters the contents of doc/. Reset to revert.
