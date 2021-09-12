@@ -21,5 +21,3 @@ function mustBeA(value, type)
 % performance-critical code.
 mypackage.internal.util.mustBeA(value, type);
 end
-
-
