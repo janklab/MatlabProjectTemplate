@@ -54,7 +54,7 @@ elseif target == "toolbox"
 elseif target == "zips"
   mypackage_make build
   mypackage_make m-doc
-  make_archives
+  make_zips
 elseif target == "dist"
   mypackage_make zips
   mypackage_make toolbox

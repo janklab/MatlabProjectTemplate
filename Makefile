@@ -35,7 +35,7 @@ build:
 # Build the programmatically-generated parts of the _source_ files for the doco
 .PHONY: docs
 docs:
-	./dev-kit/run_matlab "mypackage_make doc-src"
+	./dev-kit/run_matlab "mypackage_make docs"
 
 # Build the actual output documents
 .PHONY: doc
@@ -51,7 +51,7 @@ toolbox: m-doc
 	./dev-kit/run_matlab "mypackage_make toolbox"
 
 .PHONY: zips
-dist:
+zips:
 	./dev-kit/run_matlab "mypackage_make zips"
 
 .PHONY: dist
