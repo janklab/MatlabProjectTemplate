@@ -1,6 +1,6 @@
 # __myproject__ Release Checklist
 
-## Using the script
+## Doing a release with the script
 
 The `dev-kit/make_release` script can take care of most of the release work for you. To use it:
 
