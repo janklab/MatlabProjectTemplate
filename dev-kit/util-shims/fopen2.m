@@ -6,5 +6,5 @@ arguments
   machinefmt (1,1) string = 'n'
   encodingIn (1,1) string = 'UTF-8'
 end
-out = mypackage.internal.utils.fopen2(filename, permission, machinefmt, encodingIn);
+out = mypackage.internal.util.fopen2(filename, permission, machinefmt, encodingIn);
 end

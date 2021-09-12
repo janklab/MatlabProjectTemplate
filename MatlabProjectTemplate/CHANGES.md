@@ -7,6 +7,7 @@ Version 0.5.0 (in progress)
 * Improve organization of `make` targets, making it clearer how the doco generation sequence works.
 * Gracefully handle case where dirs like `lib/` are removed.
 * Update Travis CI config for new Matlab version, and reduce covered versions to conserved Travis credits (now that Travis doesn't have unlimited free plans).
+* Rename internal.utils class to internal.misc, to avoid confusion with the internal.util package, and make tab completion work better.
 
 Version 0.4.2 (2021-09-11)
 ---------------------------

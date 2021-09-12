@@ -1,7 +1,8 @@
-classdef utils
+classdef misc
   % Miscellaneous utilities
   %
-  % The ones in this class are ones you typically wouldn't want to import.
+  % The ones in this class are ones you typically wouldn't want to import, and are mostly
+  % for the +internal package's own internal use.
   
   methods (Static=true)
     

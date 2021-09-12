@@ -7,7 +7,7 @@ function initializePackage
 % settings state can handle a `clear classes` gracefully.
 
 % Do not re-initialize if already initialized
-if mypackage.internal.utils.getpackageappdata('initialized')
+if mypackage.internal.misc.getpackageappdata('initialized')
   return
 end
 
@@ -55,7 +55,7 @@ end
 
 % Mark library as initialized
 
-mypackage.internal.utils.setpackageappdata('initialized', true);
+mypackage.internal.misc.setpackageappdata('initialized', true);
 
 end
 
