@@ -4,7 +4,8 @@ MatlabProjectTemplate Changelog
 Version 0.5.0 (in progress)
 ---------------------------
 
-Nothing yet!
+* Improve organization of `make` targets, making it clearer how the doco generation sequence works.
+* Gracefully handle case where dirs like `lib/` are removed.
 
 Version 0.4.2 (2021-09-11)
 ---------------------------
