@@ -8,6 +8,8 @@ Version 0.4.2 (in-progress)
 * Use `CHANGES.md` instead of `CHANGES.txt` (works better with GitHub Releases)
 * Fix busted naming in `make java` target
 * Fix `.travis.yml` munging
+* Various small fixes in how the build tools work
+* `make dist` now makes both zips and mltbx; there are separate targets for zips or mltbx
 
 Version 0.4.1 (2021-01-24)
 ---------------------------

@@ -7,7 +7,8 @@ function mypackage_make(target, varargin)
 %
 % Operations:
 %   mypackage_make test         - run the tests
-%   mypackage_make dist         - build the distribution files
+%   mypackage_make dist         - build the dist files (archives and toolbox)
+%   mypackage_make archive      - build the dist archive files (zips)
 %   mypackage_make toolbox      - build the Matlab Toolbox .mltbx installer file
 %   mypackage_make clean        - delete all the derived artifacts
 %   mypackage_make doc          - build the project doco
@@ -43,10 +44,14 @@ elseif target == "clean"
   make_clean
 elseif target == "test"
   mypackage_launchtests
-elseif target == "dist"
+elseif target == "archive"
   mypackage_make build
   mypackage_make m-doc
-  make_dist
+  make_archives
+elseif target == "dist"
+  mypackage_make archive
+  mypackage_make toolbox
+  fprintf('Made dist.\n')
 elseif target == "simplify"
   make_simplify
 elseif target == "util-shim"
@@ -73,7 +78,7 @@ RAII.cd = withcd('docs');
 make_doc --preview
 end
 
-function make_dist
+function make_archives
 program = "myproject";
 distName = program + "-" + mypackage.globals.version;
 verDistDir = fullfile("dist", distName);
