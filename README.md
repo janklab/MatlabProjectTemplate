@@ -57,7 +57,7 @@ You should write unit tests for your project! Use the [Matlab Unit Test Framewor
 
 ## License
 
-MatlabProjectTemplate is multi-licensed under all of: MIT License, BSD 2-Clause License, Apache License, and GPLv3. You can use it in any project with a license compatible with any of those licenses. This includes commercial and proprietary software.
+MatlabProjectTemplate is multi-licensed under all of: BSD 3-Clause License, BSD 2-Clause License, Apache License, MIT License, and GPLv3. You can use it in any project with a license compatible with any of those licenses. This includes commercial and proprietary software, and contemporary postings to MathWorks File Exchange.
 
 If you have a licensing scenario which is not covered by the above (and jeez, what are you doing that would require _that_?), just contact me, and I'll probably add support for it. My intention is that _everybody_ can use MatlabProjectTemplate.
 

@@ -135,6 +135,9 @@ for f = fileglob2abspath({'*mypackage*', 'dev-kit/*mypackage*', 'dev-kit/private
   newName = strrep(relFile, 'mypackage', PACKAGE);
   mv(relFile, newName);
 end
+delete('LICENSE')
+delete('LICENSE-MatlabProjectTemplate.md')
+mv('myproject-LICENSE', 'LICENSE')
 
 if ~doDev
   delete('rollback_init')
