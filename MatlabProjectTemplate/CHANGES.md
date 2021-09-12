@@ -1,6 +1,11 @@
 MatlabProjectTemplate Changelog
 ===============================
 
+Version 0.5.0 (in progress)
+---------------------------
+
+Nothing yet!
+
 Version 0.4.2 (2021-09-11)
 ---------------------------
 
