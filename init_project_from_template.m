@@ -101,7 +101,7 @@ mv("src/java/myproject-java", "src/java/"+PROJECT+"-java")
 fileGlobsToMunge = regexp(".gitignore Makefile *.md */*.md */*.adoc */*.yml " ...
   + "myproject.prj.in */*.m */*/*.m */*/*/*.m */*/*/*/*.m src/java/*/*.xml " ...
   + "src/java/*/*/*/*/*/*/*/*.java azure-pipelines.yml .travis.yml " ...
-  + ".circleci/config.yml dev-kit/*.m dev-kit/*.sh mypackage_toolbox_info.m " ...
+  + ".circleci/config.yml dev-kit/*.m dev-kit/*.sh dev-kit/private/*.m mypackage_toolbox_info.m " ...
   + "dev-kit/make_release dev-kit/*.m CHANGES.md info.xml doc-project/*.txt doc-project/*.md", ' +', 'split');
 filesToMunge = unique(fileglob2abspath(fileGlobsToMunge));
 replacements = {
@@ -130,7 +130,7 @@ if ~doDev
   mungefiles(ciConfigFiles, replacements, "regex");
 end
 
-for f = fileglob2abspath({'*mypackage*', 'dev-kit/*mypackage*'})
+for f = fileglob2abspath({'*mypackage*', 'dev-kit/*mypackage*', 'dev-kit/private/*mypackage*'})
   relFile = strrep(f, reporoot+filesep, '');
   newName = strrep(relFile, 'mypackage', PACKAGE);
   mv(relFile, newName);

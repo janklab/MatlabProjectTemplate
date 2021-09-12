@@ -8,13 +8,21 @@
 #
 # Targets provided:
 #
-#   make doc - Build the project documentation into doc/
-#   make test - Run the project Matlab unit tests
-#   make toolbox - Build the project as a Matlab Toolbox .mltbx file
-#   make dist - Build the project distribution zip files
-#   make java - Build your custom Java code in src/ and install it into lib/
-#   make doc-src - Build derived Markdown files in docs/
-#   make clean - Remove derived files
+#   make docs     - Build the Markdown-stage doco in docs/
+#   make doc      - Build the final static doco into doc/
+#
+#   make test     - Run the project Matlab unit tests
+#
+#   make dist     - Build all the project distribution files
+#   make toolbox  - Build the project distribution Matlab Toolbox .mltbx file
+#   make zips     - Build the project distribution zip files
+#
+#   make doc-src  - Build derived Markdown files in docs/
+#   make clean    - Remove derived files
+#
+#   make java     - Build the project's custom Java code
+#   make build    - "Build" (p-code & munge) Mcode source files for distribution
+#   make m-doc    - Copy the static documentation into mltbx staging area
 
 .PHONY: test
 test:
@@ -41,6 +49,10 @@ m-doc:
 .PHONY: toolbox
 toolbox: m-doc
 	./dev-kit/run_matlab "mypackage_make toolbox"
+
+.PHONY: zips
+dist:
+	./dev-kit/run_matlab "mypackage_make zips"
 
 .PHONY: dist
 dist:
