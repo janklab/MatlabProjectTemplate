@@ -80,6 +80,7 @@ for i = 1:numel(htmlFields)
 end
 
 PACKAGE_CAP = [upper(PACKAGE(1)) PACKAGE(2:end)];
+PACKAGE_UPPER = upper(PACKAGE);
 
 % Do work!
 
@@ -101,7 +102,8 @@ mv("src/java/myproject-java", "src/java/"+PROJECT+"-java")
 fileGlobsToMunge = regexp(".gitignore Makefile *.md */*.md */*.adoc */*.yml " ...
   + "myproject.prj.in */*.m */*/*.m */*/*/*.m */*/*/*/*.m src/java/*/*.xml " ...
   + "src/java/*/*/*/*/*/*/*/*.java azure-pipelines.yml .travis.yml " ...
-  + ".circleci/config.yml dev-kit/*.m dev-kit/*.sh dev-kit/private/*.m mypackage_toolbox_info.m " ...
+  + ".circleci/config.yml dev-kit/*.m dev-kit/*.sh dev-kit/run_matlab " ...
+  + "dev-kit/private/*.m mypackage_toolbox_info.m " ...
   + "dev-kit/make_release dev-kit/*.m CHANGES.md info.xml doc-project/*.txt doc-project/*.md", ' +', 'split');
 filesToMunge = unique(fileglob2abspath(fileGlobsToMunge));
 replacements = {
@@ -116,6 +118,7 @@ replacements = {
   "__author_homepage__" AUTHOR_HOMEPAGE
   "myproject" PROJECT
   "mypackage" PACKAGE
+  "MYPACKAGE" PACKAGE_UPPER
   "myghuser" GHUSER
   "Mypackage" PACKAGE_CAP
   "R2019b" PROJECT_MATLAB_VERSION
